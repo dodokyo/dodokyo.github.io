@@ -20,6 +20,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "dodokyo", // Usually your GitHub org/user name.
   projectName: "dodoco-ssg", // Usually your repo name.
+  trailingSlash: false,
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -63,6 +64,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
+      metadata: [
+        { name: "keywords", content: "frontend, 취업가이드" },
+        {
+          name: "google-site-verification",
+          content: "Ov_hk6LqaaE5KiwXnqF2gTKwPxBE3qG5Zr3o5UWZXc8",
+        },
+      ],
       navbar: {
         title: "My Site",
         logo: {
