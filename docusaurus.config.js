@@ -35,15 +35,6 @@ const config = {
 
   presets: [
     [
-      "@docusaurus/preset-classic",
-      {
-        gtag: {
-          trackingID: "G-GY41PYRR94",
-          anonymizeIP: true,
-        },
-      },
-    ],
-    [
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
@@ -63,6 +54,10 @@ const config = {
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
+        },
+        gtag: {
+          trackingID: "G-GY41PYRR94",
+          anonymizeIP: true,
         },
       }),
     ],
