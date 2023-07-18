@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
+  title: "DoDoCo(도도코)의 FE 개발",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
 
@@ -76,22 +76,22 @@ const config = {
         },
       ],
       navbar: {
-        title: "My Site",
+        title: "DODOCO",
         logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
+          alt: "dodoco Logo",
+          src: "img/dodoco-logo.svg",
         },
         items: [
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "Tutorial",
+            label: "DevTech",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
+            href: "https://www.youtube.com/@dodocoding",
+            label: "취업상담소 Youtube",
             position: "right",
           },
         ],
@@ -112,17 +112,17 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: "취업상담소 Youtube",
+                href: "https://www.youtube.com/@dodocoding",
               },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
+              // {
+              //   label: "Discord",
+              //   href: "https://discordapp.com/invite/docusaurus",
+              // },
+              // {
+              //   label: "Twitter",
+              //   href: "https://twitter.com/docusaurus",
+              // },
             ],
           },
           {
@@ -139,7 +139,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} DoDoCo(도도코), Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
