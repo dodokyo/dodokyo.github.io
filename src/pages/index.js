@@ -17,9 +17,9 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/category/취업-상담소"
+            to="/docs/fe-employment/google-forms"
           >
-            취업 상담소 답변 결과
+            취업 상담소 신청
             <svg
               width="13.5"
               height="13.5"
