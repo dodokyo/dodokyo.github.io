@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[927],{3641:s=>{s.exports=JSON.parse('{"label":"hello","permalink":"/dodoco-ssg/blog/tags/hello","allTagsPath":"/dodoco-ssg/blog/tags","count":2}')}}]);
