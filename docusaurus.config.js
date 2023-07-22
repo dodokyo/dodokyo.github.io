@@ -59,6 +59,12 @@ const config = {
           trackingID: "G-GY41PYRR94",
           anonymizeIP: true,
         },
+        sitemap: {
+          changefreq: "daily",
+          priority: 0.5,
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
+        },
       }),
     ],
   ],
