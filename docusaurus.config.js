@@ -103,8 +103,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "취업상담신청",
+                to: "/docs/fe-employment/google-forms",
               },
             ],
           },
