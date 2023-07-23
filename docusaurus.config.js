@@ -98,7 +98,7 @@ const config = {
             position: "left",
             label: "DevTech",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          // { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://www.youtube.com/@dodocoding",
             label: "취업상담소 Youtube",
@@ -138,10 +138,10 @@ const config = {
           {
             title: "More",
             items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
+              // {
+              //   label: "Blog",
+              //   to: "/blog",
+              // },
               {
                 label: "GitHub",
                 href: "https://github.com/facebook/docusaurus",
