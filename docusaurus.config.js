@@ -81,8 +81,12 @@ const config = {
             "frontend, 취업가이드, 개발자 취업, 포트폴리오, 코테 공부, 개발자 현실, 프론트 개발자",
         },
         {
-          name: "google-site-verification",
-          content: "Ov_hk6LqaaE5KiwXnqF2gTKwPxBE3qG5Zr3o5UWZXc8",
+          name: "naver-site-verification",
+          content: "a4d2f190e70b852a558130ddef9d13395f6668f9",
+        },
+        {
+          name: "msvalidate.01",
+          content: "FD2B428ECA4CE6FB9656F0DECA32DC04",
         },
       ],
       navbar: {
