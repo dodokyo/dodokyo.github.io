@@ -14,12 +14,12 @@ const config = {
   url: "https://dodokyo.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/dodoco-ssg/",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "dodokyo", // Usually your GitHub org/user name.
-  projectName: "dodoco-ssg", // Usually your repo name.
+  projectName: "dodokyo.github.io", // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: "throw",
