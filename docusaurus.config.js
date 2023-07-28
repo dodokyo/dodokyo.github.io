@@ -102,7 +102,13 @@ const config = {
             position: "left",
             label: "DevTech",
           },
-          // { to: "/blog", label: "Blog", position: "left" },
+          {
+            type: "docSidebar",
+            sidebarId: "softSkills",
+            position: "left",
+            label: "Soft Skills",
+          },
+          { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://www.youtube.com/@dodocoding",
             label: "취업상담소 Youtube",
