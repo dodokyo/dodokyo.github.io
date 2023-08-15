@@ -1,7 +1,7 @@
 ---
-slug: blog-start
-title: 도도코 블로그 시작🎉
-authors: [dodoco]
+slug: 230728-blog-start
+title: 도도 블로그 시작🎉
+authors: [dodo]
 tags: [docusaurus]
 ---
 

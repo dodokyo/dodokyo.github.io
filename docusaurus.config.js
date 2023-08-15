@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "DoDoCo(도도코)의 FE 개발",
-  tagline: "[신청가능] 프론트엔드(Frontend) 취업/공부 고민 상담 신청 (무료)",
+  title: "DoDo(도도)의 FE 개발",
+  tagline: "프론트엔드(Frontend) 취업/공부 고민 상담 신청",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -90,9 +90,9 @@ const config = {
         },
       ],
       navbar: {
-        title: "DODOCO",
+        title: "DODO",
         logo: {
-          alt: "dodoco Logo",
+          alt: "dodo Logo",
           src: "img/dodoco-logo.svg",
         },
         items: [
@@ -100,7 +100,19 @@ const config = {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "DevTech",
+            label: "🍶취업 핸드북",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "dockerHandbook",
+            position: "left",
+            label: "🏗️ Docker 핸드북",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "DevOps",
+            position: "left",
+            label: "DevOps",
           },
           {
             type: "docSidebar",
