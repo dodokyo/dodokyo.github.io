@@ -63,105 +63,51 @@ TaskList
 	- MacMini - codeServer start on boot
 	- codeserver - subpath, subdomain set up
 
-## 맥미니 기본 셋업
+## 맥미니 기본 셋업 방법
 
-### brew 설치
+### 1. brew 설치
 
-### OS Update
+### 2. OS Update
 
-### 맥미니 비번없이 바로 부팅 셋업
-	- 자동으로 dosimpact(계정) 로그인 켜기
-	- https://www.fonedog.com/ko/powermymac/how-to-turn-off-password-on-mac.html
+### 3. 맥미니 비번없이 바로 부팅 셋업
+
+- 설정에서 자동으로 user(계정) 로그인 켜기  
+[Ref](https://www.fonedog.com/ko/powermymac/how-to-turn-off-password-on-mac.html)
 
 
-### [필수셋팅] OS X Server: 잠자기 모드를 차단하는 방법
-	*껐따키면 사라짐..?!
+### 4. [필수셋팅] OS X Server: 잠자기 모드를 차단하는 방법
 
-https://support.apple.com/ko-kr/HT200106
+```
 명령어를 입력하면 커버를 닫아도 잠자기 모드가 활성화 되지 않는다.
 sudo pmset -c disablesleep 1  
+
 다시 잠자기 모드를 활성화 하려면    명령어를 입력하면 된다.
 sudo pmset -c disablesleep 0
+```
+[Ref](https://support.apple.com/ko-kr/HT200106)
 
 
-### CodeServer install
+### 5. CodeServer install
+
+brew install 및 brew services로 설치하자.
 
 ```
-curl -fsSL https://code-server.dev/install.sh | sh
-
-1. 포트 설정, 2. 비밀번호 설정, 3. 보안 그룹 설정(개별 클라우드 셋팅하기)
-vi ~/.config/code-server/config.yaml
-	- 127.0.0.1:8080 -> 0.0.0.0:8080 ( 포트에서 접속 가능하게 )
-
-## 실행 및 유지 & 자동재시작 ( launchctl이용 )
->sudo systemctl enable --now code-server@$USER
-쉘에서 code-server로 실행 할 수 있으나, 원활한 사용을 위해 서비스에 등록하여 사용할 수 있습니다.
-
-# 서비스 등록 (최초1회 실행)
-sudo launchctl enable --now code-server@$USER
-
-# code-server 실행
-sudo launchctl start code-server@$USER
-
-# code-server 중지
-sudo launchctl stop code-server@$USER
-
-# code-server 재시작
-sudo systemctl restart code-server@$USER
-
-# code-server 상태
-sudo systemctl status code-server@$USER
-
-```
----
-https://support.apple.com/ko-kr/guide/terminal/apdc6c1077b-5d5d-4d35-9c19-60f2397b2369/mac
-https://www.44bits.io/ko/post/register-service-on-macos-by-using-launchctl
-
-eg) 
-다음과 같은 명령어로 주피터 노트북을 실행한다.
-ipython notebook
-
-시작프로그램으로 위 명령어를 실행시켜, 주피터 노트북을 처음에 시작하자.
----- 
-
-cd /Library/LaunchDaemons/
-sudo touch com.vscode.server.plist
-sudo vi com.vscode.server.plist
-
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-  <dict>
-    <key>KeepAlive</key>
-    <true />
-    <key>RunAtLoad</key>
-    <true/>
-    <key>Label</key>
-    <string>com.vscode.server</string>
-    <key>ProgramArguments</key>
-    <array>
-      <string>/opt/homebrew/bin/code-server</string>
-    </array>
-  </dict>
-</plist>
+brew install code-server
+brew services start code-server 
 ```
 
-sudo launchctl load -w /Library/LaunchDaemons/com.vscode.server.plist
-sudo launchctl start com.vscode.server
-sudo launchctl list | grep com.vscode.server
-sudo launchctl stop com.vscode.server
-sudo launchctl unload /Library/LaunchDaemons/com.vscode.server.plist
+### 6. Docker install 
 
-# Docker install 
 
-https://codewagon.tistory.com/2
-
+```
 brew update
 brew upgrade
 brew search docker
 brew install --cask docker
+brew install docker-compose
+```
 
+[ref](https://codewagon.tistory.com/2)
 
 ---
 
@@ -208,7 +154,7 @@ brew services start nginx
 ( brew services [run|start|stop|restart|cleanup] service_name  )
 
 # 서비스 확인
-brew service list
+brew services
 
 Name        Status  User      File
 nginx       started dosimpact ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
@@ -285,7 +231,10 @@ configure arguments: --prefix=/opt/homebrew/Cellar/nginx/1.25.1_1 --sbin-path=/o
 brew install nginx 
 
 # 서비스 시작
-brew services start nginx 
+brew services start nginx
+
+# 서비스 목록
+brew services
 ```
 
 <br/>
@@ -339,7 +288,7 @@ https://ukprog.tistory.com/125
 
 sudo certbot certonly --manual
 
-www.my-coding.site  
+www.my-coding.site
 
 -----------
 Create a file containing just this data:
@@ -366,6 +315,11 @@ This certificate expires on 2023-11-08.
 These files will be updated when the certificate renews.
 
 -----------
+
+#### 권한 문제 해결
+```
+sudo chmod -R 755 /etc/letsencrypt
+```
 
 #### cron job
 echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew -q" | sudo tee -a /etc/crontab > /dev/null
@@ -404,12 +358,11 @@ https://www.hakawati.co.kr/entry/Code-Server-%EA%B5%AC%EC%B6%95%ED%8E%B8#NginX%E
 (http only 확인 )
 http://www.my-coding.site /login
 
-# https 적용
+## https 적용
 
 
-# 수정 확인 
+## 수정 확인 
 nginx -t 
-
 
 ```
 #user  nobody;
@@ -496,3 +449,69 @@ DNS 레코드 종류 : https://www.delmaster.net/69
 DNS 레코드 종류 쉽게 이해 : https://inpa.tistory.com/entry/WEB-%F0%9F%8C%90-DNS-%EB%A0%88%EC%BD%94%EB%93%9C-%EC%A2%85%EB%A5%98-%E2%98%85-%EC%95%8C%EA%B8%B0-%EC%89%BD%EA%B2%8C-%EC%A0%95%EB%A6%AC  
 ssh 접속 to mac mini : https://dev-repository.tistory.com/96  
 
+
+## 최종 nginx.conf
+
+```
+#user  nobody;
+worker_processes  1;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+#pid        logs/nginx.pid;
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+    #                  '$status $body_bytes_sent "$http_referer" '
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';
+
+    #access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+    #gzip  on;
+
+    server {
+        listen 443 ssl; # managed by Certbot
+        server_name www.you-domain.site; # managed by Certbot
+        ssl_certificate /opt/homebrew/etc/nginx/fullchain.pem; # managed by Certbot
+        ssl_certificate_key /opt/homebrew/etc/nginx/privkey.pem; # managed by Certbot
+        # SSL 설정 추가 (optional, 추천)
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_ciphers 'TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-SHA:ECDHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384';
+        ssl_prefer_server_ciphers off;
+        ssl_session_timeout 1d;
+        ssl_session_cache shared:SSL:50m;
+
+        location / {
+            proxy_pass http://127.0.0.1:2229/;           
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection upgrade;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+	    }   
+    }
+
+    server {
+        listen 80 ;
+        server_name www.you-domain.site;
+        location / {  # HTTP to HTTPS 리디렉션
+            return 301 https://$host$request_uri;
+        }
+    }
+
+    include servers/*;
+}
+```

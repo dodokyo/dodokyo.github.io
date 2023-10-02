@@ -93,7 +93,7 @@ const config = {
         title: "DODO",
         logo: {
           alt: "dodo Logo",
-          src: "img/dodoco-logo.svg",
+          src: "img/coding-lupine-logo-dark-circle.png",
         },
         items: [
           {
