@@ -17,7 +17,9 @@ sidebar_position: 4
 
 인터넷을 찾아보니 code-server에 https를 붙이기 위해서 `nginx를 앞단`에 두는 방식을 주로 사용했다.    
 - ubuntu 환경에서 certbot이 쉽게 nginx설정을 바꾸어 연동을 해주는데  
-- MacOS환경에서 brew로 nginx을 설치하니 경로가 다르게 설정되고 nginx도 직접 설정해줘야 했다. 
+- MacOS환경에서 brew로 nginx을 설치했다. 
+- nginx 설치 경로가 우분투 환경과 다르게 셋업 되었다. 그래서 cerbot 자동 설정(`python3-certbot-nginx`)이 실패..
+- 그래서 cerbot 수동설정 및 nginx conf도 직접 설정해서 https 인증서를 발급했다.
 
 
 크게 code-server에 https를 붙이는 방법은 `2가지다`. (여기서는 1번 방법을 기록)  
@@ -62,19 +64,20 @@ ci.example.com -> 9009 portainer 서버
 - DNS 래코드 설정으로 내 아이피와 연결한다. eg) www.example.com -> 123.123.123.123
 
 2. nginx 80 port 설정
-- 80포트에 대해서 설정 한다.
+- 맥미니의 80포트 접속 = nginx로 셋업
+- 마치 GW 같은 역학을 nginx가 해주는 것이다.  
+- 그리고 각 도메인 별로 분기처리 하여, 뒷단의 서비스 포트로 연결한다.
 
 ```
     server {
-        listen 80 ;
-        server_name www.example.com;
+        listen 80 ; # nginx는 80포트 opn  
+        server_name www.example.com; # 그 중 특정 도메인에 해당하는 경우만 처리한다.
 
         location / {  # HTTP to HTTPS 리디렉션
             return 301 https://$host$request_uri;
         }
     }
 ```
-
 
 3. cerbot 실행
 
@@ -84,8 +87,8 @@ ci.example.com -> 9009 portainer 서버
 
 ```
     server {
-        listen 80 ;
-        server_name www.example.com;
+        listen 80 ; # nginx는 80포트 opn  
+        server_name www.example.com; # 그 중 특정 도메인에 해당하는 경우만 처리한다. 
 
         location /.well-known/acme-challenge {
             alias /opt/homebrew/etc/nginx/.well-known/acme-challenge; # 실제 파일이 위치한 경로를 지정합니다.
@@ -215,54 +218,70 @@ sudo certbot renew
 아래 명령어를 참고해서 nginx를 MacOS에 설치한다.   
 
 ```
-# 패키지 설치
+#1 패키지 설치
 brew install nginx 
 
-# 서비스 시작
+#2 서비스 시작
 brew services start nginx
 
-# 서비스 목록
+#3 서비스 목록
 brew services
-```
 
-<br/>
+# 서비스 재시작
+brew services restart nginx
 
-#### nginx 도달 확인 (port 8080)
+#4 8080포트 접근시 nginx 도달 확인하자.
 > http://123.123.123.123:8080/
-
+```
 
 <br/>
 
 #### 설정파일에서 80 포트로 변경해서 nginx접근이 되는지 확인 해보자.
 
 ```
-# nginx.conf 파일 경로 확인
+# 1. nginx.conf 파일 경로 확인
 brew info nginx
-```
 
-- 설정 파일 경로 : /opt/homebrew/etc/nginx/nginx.conf
+# 1.1 아래처럼 설정파일 경로를 확인 
+...
+The default port has been set in /opt/homebrew/etc/nginx/nginx.conf to 8080 so that
+nginx can run without sudo.
+...
+
+# 2. 설정 파일 변경
+설정 파일 경로 : /opt/homebrew/etc/nginx/nginx.conf
   - 포트 8080 > 80 변경
-- 서비스 재시작 brew services restart nginx
 
+#3. 서비스 재시작
+brew services restart nginx
 
-#### nginx 도달 확인 (port 80)
+#3 nginx 도달 확인 (port 80)
 > http://123.123.123.123/
-
-
+```
 
 <br/>
 
 ### 2. 도메인(가비아) > DNS 레코드 수정
 
+my-coding.site 도메인을 구매 후  
+www.my-coding.site 도메인과 내 맥미니 서버와 연결해야 한다.  
 
-#### A 타입으로 레코드를 추가한다. 
+```
+#1 A 타입으로 레코드를 추가한다. 
+- eg) www.my-coding.site -> 123.123.123.123 설정을 원한다면
+- host:www
 - host 는 www 이며 서브도메인을 뜻한다. 
 
-Note) host에 @은 서브도메인이 없는 경우이다.
-즉, http://my-coding.site / 로 접속하면 지정된 IP로 이동한다.
+# 참고)
+- eg) my-coding.site -> 123.123.123.123 설정을 원한다면
+- host:@
+- Note) host에 @은 서브도메인이 없는 경우이다.
+- 즉, http://my-coding.site / 로 접속하면 지정된 IP로 이동한다.
 
-#### nginx 도달 확인
-http://www.my-coding.site 
+#2 nginx 도달 확인
+>http://www.my-coding.site 
+
+```
 
 
 <br/>
@@ -308,12 +327,11 @@ mkdir -p .well-known/acme-challenge/
 vi Emu_LEu_HbaAeKH6OrOER88xvjurfFKRJM7-MoYhjN8
 Emu_LEu_HbaAeKH6OrOER88xvjurfFKRJM7-MoYhjN8.HpJsIlJVhSaVM-6mjKz5_4ZU5tydqNW2B5pjcvuHjS0  입력 후 저장
 
-# nginx 재실행
+#3. nginx 재실행
 nginx -t # 문법 검사
 brew services restart nginx # 재시작 
 
-# cerbot 확인 후 발급 성공
-
+#4. cerbot 확인 후 발급 성공
 Successfully received certificate.
 Certificate is saved at: /etc/letsencrypt/live/www.my-coding.site /fullchain.pem
 Key is saved at:         /etc/letsencrypt/live/www.my-coding.site /privkey.pem
@@ -321,10 +339,10 @@ This certificate expires on 2023-11-08.
 These files will be updated when the certificate renews.
 
 
-# 인증서 읽기 권한 문제 해결
+#5. 인증서 읽기 권한 문제 해결
 sudo chmod -R 755 /etc/letsencrypt
 
-# nginx.conf 추가
+#6. https 처리하는 nginx.conf 추가
 
 ---
     server {
@@ -352,18 +370,15 @@ sudo chmod -R 755 /etc/letsencrypt
 ...
 
 ```
+### 4. 인증서 갱신
 
 #### cron job
 echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew -q" | sudo tee -a /etc/crontab > /dev/null
 
------------
+#### 수동 작업
 ( nginx 경로로 오류 > sudo certbot --nginx -d www.my-coding.site  )
 
 
-
-
-## 수정 확인 
-nginx -t 
 
 ## 최종 nginx.conf
 
