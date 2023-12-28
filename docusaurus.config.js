@@ -110,12 +110,6 @@ const config = {
           },
           {
             type: "docSidebar",
-            sidebarId: "DevOps",
-            position: "left",
-            label: "DevOps",
-          },
-          {
-            type: "docSidebar",
             sidebarId: "softSkills",
             position: "left",
             label: "Soft Skills",
