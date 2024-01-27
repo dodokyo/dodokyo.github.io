@@ -116,8 +116,8 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://www.youtube.com/@dodocoding",
-            label: "취업상담소 Youtube",
+            href: "https://www.youtube.com/@codingLupine",
+            label: "코딩루팡 Youtube",
             position: "right",
           },
         ],
@@ -138,8 +138,8 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "취업상담소 Youtube",
-                href: "https://www.youtube.com/@dodocoding",
+                label: "코딩루팡 Youtube",
+                href: "https://www.youtube.com/@codingLupine",
               },
               // {
               //   label: "Discord",
@@ -165,7 +165,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} DoDoCo(도도코), Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} DoDo(도도), Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
