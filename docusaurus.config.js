@@ -98,21 +98,27 @@ const config = {
         items: [
           {
             type: "docSidebar",
-            sidebarId: "tutorialSidebar",
+            sidebarId: "employment",
             position: "left",
             label: "🍶취업 핸드북",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "employmentCC",
+            position: "left",
+            label: "📒취업 상담소",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "freeLectures",
+            position: "left",
+            label: "🍭무료강의",
           },
           {
             type: "docSidebar",
             sidebarId: "dockerHandbook",
             position: "left",
             label: "🏗️ Docker 핸드북",
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "softSkills",
-            position: "left",
-            label: "Soft Skills",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
