@@ -5,15 +5,19 @@ sidebar_position: 1
 
 # 0. docusaurus 소개 및 활용 방법
 
-안녕하세요, 여러분! 오늘은 개발자들 사이에서 주목받고 있는 문서 작성 도구인 'Docusaurus'에 대해 알아보겠습니다. Docusaurus는 무엇이고, 어떻게 사용되며, 다른 도구들과 비교했을 때 어떤 장단점을 가지고 있는지 알아보도록 하겠습니다. 또한, Docusaurus를 활용한 블로그 운영에 대한 강의 내용도 함께 살펴보겠습니다.
+안녕하세요, 여러분! 오늘은 개발자들 사이에서 주목받고 있는 문서 작성 도구인 'Docusaurus'에 대해 알아보겠습니다.  
+Docusaurus는 무엇이고, 어떻게 사용되며, 다른 도구들과 비교했을 때 어떤 장단점을 가지고 있는지 알아보도록 하겠습니다.  
+또한, Docusaurus를 활용한 블로그 운영에 대한 강의 내용도 함께 살펴보겠습니다.  
+
 
 ## docusaurus 란 ? 
 
-Docusaurus는 페이스북에서 개발한 오픈 소스 문서화 도구로, 주로 개발자들이 프로젝트와 관련된 문서를 쉽게 작성하고 유지보수할 수 있도록 도와줍니다. React 기반으로 만들어져 있어 사용이 간편하며, 멋진 문서화 페이지를 손쉽게 만들 수 있습니다.
+Docusaurus는 페이스북에서 개발한 오픈 소스 문서화 도구로, 주로 개발자들이 프로젝트와 관련된 문서를 쉽게 작성하고 유지보수할 수 있도록 도와줍니다.  
+React 기반으로 만들어져 있어 사용이 간편하며, 멋진 문서화 페이지를 손쉽게 만들 수 있습니다.
 
 ## docusaurus 사용 사례
 
-Docusaurus는 다양한 분야에서 사용되고 있습니다. 주로 기술적인 문서 작성에 활용되지만, 공식 문서, 블로그, 개발자 커뮤니티 사이트 등에서도 많이 사용되고 있습니다. -
+Docusaurus는 다양한 분야에서 사용되고 있습니다. 주로 기술적인 문서 작성에 활용되지만, 공식 문서, 블로그, 개발자 커뮤니티 사이트 등에서도 많이 사용되고 있습니다.  
 - Facebook, Microsoft, Twitter 등 대형 기업들도 Docusaurus를 채택하여 문서화에 활용하고 있습니다.
 
 showcase 보러가기 > https://docusaurus.io/showcase  
@@ -43,12 +47,20 @@ showcase 보러가기 > https://docusaurus.io/showcase
 4. CI/CD 가능   
 - github action을 이용해서 gh-pages에 배포할 수 있다.  
 
-### Best Practice 
+5. React + Typescript 사용 가능  
+- 필요하다면 리액트 컴포넌트를 도입해서 개발 가능.  
+
+
+### Blog Best Practice 
+
+아래 사이트는 docusaurus 만들지는 않았지만 사이트 운용 전략 관점에서 보자.  
 
 daleseo > https://www.daleseo.com/  
-- 사용자 유입 많음 / 가독성 높은 글 쓰는 방법  
+- 사용자 유입 많음 / 가독성 높은 글 쓰는 방법
+  
 벨로퍼트와 함께하는 모던 리액트 > https://react.vlpt.us/   
 - 튜토리얼 형식의 기술 정리  
+
 캡틴판교 블로그 > https://joshua1988.github.io/   
 - 마켓팅 퍼널 만들기, SEO + 오가닉 유입을 세일즈로 연동    
 

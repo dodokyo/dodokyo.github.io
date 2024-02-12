@@ -8,7 +8,8 @@ sidebar_position: 2
 
 공식문서 > https://docusaurus.io/docs  
 
-## gitrepo 생성
+## Git Repo 생성
+
 ![Alt text](image-1.png)
 
 2가지 종류로 래포를 만들 수 있다.  
@@ -28,21 +29,20 @@ sidebar_position: 2
 ## Install 
 
 ```
-// node.js 설치
+// 0.node.js 설치
 node -v
 
-// create project
+// 1. create project
 npx create-docusaurus@3.1.1 my-website classic
 
-// npm to yarn
+// 2. npm to yarn
 yarn
 rm package-lock.json
 
-// start
+// 3. start
 cd ./my-website
 > "start": "docusaurus start --host 0.0.0.0",
 yarn start
-
 ```
 
 ![Alt text](image-3.png)

@@ -14,7 +14,56 @@ GitHub Actions는 GitHub에서 제공하는 자동화 서비스
 - `.github/workflows` 디렉토리에 워크플로우를 정의하여 설정  
 
 
-Point.  
+```yml
+name: Workflow 이름
+
+on:
+  event:
+    - 조건1
+    - 조건2
+
+jobs:
+  job이름:
+    name: Job 이름
+    runs-on: runner 환경
+
+    steps:
+      - name: Step 1
+        run: 실행 명령어
+
+      - name: Step 2
+        run: 실행 명령어
+---
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm test
+
+```
+
+### Point.  
 - 코드에 대한 형상 관리 (md파일 포함) => github  
 - CI/CD에 대한 형상 관리 = workflows 코드 자체를 관리 => github  
 - CI/CD 수행 = github actions  
@@ -24,19 +73,22 @@ Point.
 
 https://docusaurus.io/docs/deployment#triggering-deployment-with-github-actions
 
-![](imge3.excalidraw.png)
+
+### Process
+
+![](imge4.excalidraw.png)
 
 
 ### 시나리오  
 
-1. docusaurus 문서 발행
-2. 저장소 push  
-3. github actions 발동 > 워크플로우
-5. gh-pages 에 자동으로 배포
+1. docusaurus 문서 발행. 
+2. 커밋 및 저장소 push > Event.   
+3. github actions 발동 > 워크플로우 시작  
+4. gh-pages 에 자동으로 배포  
 
 
-### workflow 추가
 
+## github repo init 
 
 ```
 // git init & commit 
@@ -46,6 +98,8 @@ git add --all .
 git commit -m "init"
 git push upstream main
 ```
+
+## github actions workflow 추가
 
 공식문서의 내용을 아래에 경로에 붙여 넣자.  
 - .github/workflows/deploy.yml
@@ -104,61 +158,13 @@ jobs:
 ![Alt text](image-4.png)
 
 
----
 
-```yml
-name: Workflow 이름
-
-on:
-  event:
-    - 조건1
-    - 조건2
-
-jobs:
-  job이름:
-    name: Job 이름
-    runs-on: runner 환경
-
-    steps:
-      - name: Step 1
-        run: 실행 명령어
-
-      - name: Step 2
-        run: 실행 명령어
----
-name: CI
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    name: Build and Test
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Tests
-        run: npm test
-
-```
 
 
 ## github setting 
 
-[1]
+### [1] GITHUB_TOKEN 권한
+
 GITHUB_TOKEN 은 자동으로 발급되는데, 기본 권한은 readonly 이다.    
 repo에 gh-pages branch를 만들고 푸쉬 하도록 쓰기 권한을 부여하자.  
 
@@ -167,7 +173,8 @@ repo에 gh-pages branch를 만들고 푸쉬 하도록 쓰기 권한을 부여하
 
 ![Alt text](image-6.png)
 
-[2]
+### [2] gh-pages branch 설정  
+
 아래 설정을 하지 않으면, README.md가 나온다. CI과정을 거쳐 gh-pages라는 브랜치로 배포가 되니 설정을 변경하자.
 
 project setting > pages > github pages > branch > gh-pages가 나온다.
@@ -177,6 +184,7 @@ project setting > pages > github pages > branch > gh-pages가 나온다.
 
 ## gh-pages 확인
 
+페이지 접속 : nickname.github.io 
 
 ### 트러블 슈팅: baseUrl 관련 오류
 
