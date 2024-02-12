@@ -54,3 +54,5 @@ docusaurus.config.js
     ],
   ],
 ```
+
+![Alt text](image-18.png)

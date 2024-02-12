@@ -73,3 +73,10 @@ yarn add @marp-team/marp-cli cpy-cli
 
 ## 4.4 마치며
 
+지금까지 Docusaurus를 통한 개발자 기술 블로그 운용 방법에 대해서 알아봤습니다.   
+앞으로 개발자로 성장하는데 있어서 방대한 지식들을 정리하는 보조 뇌로 잘 활용하길 바라겠습니다. ~ 
+
+디벨롭 방향  
+- github actions + pages 대신, AWS + Docker Container + Portainer 조합으로 직접 CI/CD 구축해보기  
+- ghost admin, wordpress API 등과 연동    
+
