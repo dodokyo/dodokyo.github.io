@@ -18,6 +18,7 @@ sidebar_position: 8
 https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-google-gtag 
 
 ![Alt text](image-13.png)
+![Alt text](image-14.png)
 
 
 ```js
@@ -46,7 +47,7 @@ docusaurus.config.js
           customCss: require.resolve("./src/css/custom.css"),
         },
         + gtag: {
-        +   trackingID: "G-GY41PYRR94",
+        +   trackingID: "G-CVB057YPM2",
         +   anonymizeIP: true,
         + },
       }),
