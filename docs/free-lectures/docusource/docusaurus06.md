@@ -15,7 +15,9 @@ sidebar_position: 6
 
 
 docs 폴더를 여러개의 하위 그룹으로 나누어서 문서화를 진행하고자 한다.  
+
 참고 Repo : https://github.com/7code-group/7code-group.github.io. 
+> https://7code-group.github.io  
 
 ## 1.docs 그룹 폴더 만들기
 
