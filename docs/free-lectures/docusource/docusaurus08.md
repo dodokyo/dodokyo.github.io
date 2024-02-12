@@ -13,7 +13,7 @@ sidebar_position: 8
 - *사용자에 대해서 통계적 분석을 위한 목적으로 사용  
 
 
-## GA 붙이기
+## GA4 붙이기  
 
 https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-google-gtag 
 

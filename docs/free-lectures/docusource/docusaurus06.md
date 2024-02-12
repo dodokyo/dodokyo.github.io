@@ -3,10 +3,20 @@ sidebar_position: 6
 ---
 
 
-# 3.2 카테고리 및 SideBar
+# 3.2 폴더 그룹 만들기  
 
 
-## docs 그룹 폴더 만들기
+- [3.2 폴더 그룹 만들기](#32-폴더-그룹-만들기)
+  - [1.docs 그룹 폴더 만들기](#1docs-그룹-폴더-만들기)
+    - [`_category_.json`](#_category_json)
+    - [head sidebar position](#head-sidebar-position)
+  - [2.sidebars 추가](#2sidebars-추가)
+  - [3.docusaurus.config.js 추가](#3docusaurusconfigjs-추가)
+
+
+docs 폴더를 여러개의 하위 그룹으로 나누어서 문서화를 진행하고자 한다.  
+
+## 1.docs 그룹 폴더 만들기
 
 
 ```
@@ -44,7 +54,7 @@ sidebar_position: 99
 more options > https://docusaurus.io/docs/create-doc#doc-tags
 
 
-## sidebars 추가 
+## 2.sidebars 추가 
 
 ```js
 // sidebars.js
@@ -73,7 +83,7 @@ module.exports = sidebars;
 
 ```
 
-## docusaurus.config.js 추가
+## 3.docusaurus.config.js 추가
 
 ```js
 ...

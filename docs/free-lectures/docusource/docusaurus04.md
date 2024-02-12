@@ -8,14 +8,14 @@ sidebar_position: 4
 
 ```
 .
-├── blog
 ├── build
+├── blog
 ├── docs
-├── docusaurus.config.js
-├── package.json
-├── sidebars.js
 ├── src
 ├── static
+├── sidebars.js
+├── docusaurus.config.js
+├── package.json
 └── yarn.lock
 
 ```
@@ -104,6 +104,6 @@ def hello_world():
 ```
 
 
-## 예시글
+## 실습 : 예시글 발행해 보기 
 
 Code : https://github.com/dodokyo/dodokyo.github.io/blob/main/docs/free-lectures/docusource/docusaurus05.md

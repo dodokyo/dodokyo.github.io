@@ -11,7 +11,7 @@ sidebar_position: 7
 - 웹사이트의 검색 성과를 모니터링하고 최적화할 수 있도록 도와주는 무료 도구. 
 - 사람들이 구글검색을 통해서 내 사이트에 오게 만들려면, 서치콘솔 등록은 필수이다.  
 
-### install
+## 1.install
 
 preset-classic 으로 프로젝트를 생성 했으므로 아래 패키지는 설치할 필요 없다.  
 ```
@@ -61,7 +61,7 @@ Allow: /
 Sitemap: https://nickname.github.io/sitemap.xml
 ```
 
-## Search Console 등록
+## 2.Search Console 등록
 
 
 ![Alt text](image-10.png)
@@ -84,6 +84,6 @@ docusaurus.config.js
 
 ![Alt text](image-12.png)
 
-## SEO Guide
+## 3.SEO Guide
 
 Guide > https://docusaurus.io/docs/seo
