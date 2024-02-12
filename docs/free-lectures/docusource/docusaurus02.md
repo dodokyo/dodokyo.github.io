@@ -34,6 +34,10 @@ node -v
 // create project
 npx create-docusaurus@3.1.1 my-website classic
 
+// npm to yarn
+yarn
+rm package-lock.json
+
 // start
 cd ./my-website
 > "start": "docusaurus start --host 0.0.0.0",
