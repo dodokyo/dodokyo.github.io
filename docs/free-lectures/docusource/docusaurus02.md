@@ -36,8 +36,9 @@ node -v
 npx create-docusaurus@3.1.1 my-website classic
 
 // 2. npm to yarn
+// npm install yarn -g
 yarn
-rm package-lock.json
+// rm package-lock.json
 
 // 3. start
 cd ./my-website
