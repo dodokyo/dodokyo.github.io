@@ -4,6 +4,22 @@ sidebar_position: 4
 
 # 3.1 예시글 발행
 
+## 디렉터리 구조 
+
+```
+.
+├── blog
+├── build
+├── docs
+├── docusaurus.config.js
+├── package.json
+├── sidebars.js
+├── src
+├── static
+└── yarn.lock
+
+```
+
 ## 마크다운 사용법 (기본)
 
 마크다운은 텍스트를 특정 서식으로 간단하게 표현하는 경량 마크업 언어입니다. 아래는 마크다운의 기본 사용법에 대한 간략한 설명입니다.
