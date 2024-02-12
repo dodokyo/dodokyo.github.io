@@ -5,7 +5,6 @@ sidebar_position: 99
 # docusaurus(기획중)
 
 - [docusaurus(기획중)](#docusaurus기획중)
-  - [docusaurus.config.js 변경](#docusaurusconfigjs-변경)
   - [다시 커밋을 만들어서 푸쉬하여 CI를 밟는다.](#다시-커밋을-만들어서-푸쉬하여-ci를-밟는다)
 - [SEO](#seo)
   - [trailingSlash](#trailingslash)
@@ -16,13 +15,7 @@ sidebar_position: 99
 
 
 
-## docusaurus.config.js 변경
 
-
-github repo이름이 myname.github.io 이 아닌 커스텀 이름인 경우  
-
-- 다음처럼 내 래포 이름(hello-world-docusaurus)으로 변경한다.  
-  baseUrl: "/hello-world-docusaurus/",  
 
 ## 다시 커밋을 만들어서 푸쉬하여 CI를 밟는다.  
 

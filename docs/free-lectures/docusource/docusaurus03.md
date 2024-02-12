@@ -177,3 +177,11 @@ project setting > pages > github pages > branch > gh-pages가 나온다.
 
 ## gh-pages 확인
 
+
+### 트러블 슈팅: baseUrl 관련 오류
+
+> docusaurus.config.js 변경
+github repo이름이 myname.github.io 이 아닌 커스텀 이름인 경우  
+- 다음처럼 내 래포 이름(hello-world-docusaurus)으로 변경한다.  
+  baseUrl: "/hello-world-docusaurus/",  
+
