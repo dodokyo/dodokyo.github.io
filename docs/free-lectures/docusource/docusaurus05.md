@@ -3,10 +3,10 @@ sidebar_position: 5
 ---
 
 
-# 3.1 예시글 발행(예))
+# 3.1 예시글 발행(예)
 
-- [3.1 예시글 발행(예))](#31-예시글-발행예)
-  - [goal](#goal)
+- [3.1 예시글 발행(예)](#31-예시글-발행예)
+  - [Goal](#goal)
   - [1. create-next-app](#1-create-next-app)
     - [eg](#eg)
   - [2. yarn berry migration](#2-yarn-berry-migration)
@@ -19,7 +19,7 @@ sidebar_position: 5
   - [ref](#ref)
 
 
-## goal 
+## Goal 
 
 - nextjs 을 시작하는 방법    
 - yarn berry로 변경하는 방법  
@@ -134,5 +134,5 @@ yarn dev
 
 ## ref
 
-Release: Yarn 4.0 🪄⚗️ https://yarnpkg.com/blog/release/4.0
-https://velog.io/@creco/next.js-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0 
+[Release: Yarn 4.0](https://yarnpkg.com/blog/release/4.0)
+[Velog ](https://velog.io/@creco/next.js-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)

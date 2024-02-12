@@ -90,5 +90,6 @@ def hello_world():
 
 ## 예시글
 
-Code : 
+Code : https://github.com/dodokyo/dodokyo.github.io/blob/main/docs/free-lectures/docusource/docusaurus05.md
+
 View : [예시글](./docusaurus05.md)
