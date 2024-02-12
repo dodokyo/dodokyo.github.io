@@ -134,5 +134,5 @@ yarn dev
 
 ## ref
 
-[Release: Yarn 4.0](https://yarnpkg.com/blog/release/4.0)
-[Velog ](https://velog.io/@creco/next.js-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)
+[Release: Yarn 4.0](https://yarnpkg.com/blog/release/4.0). 
+[Velog](https://velog.io/@creco/next.js-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0). 

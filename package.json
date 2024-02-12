@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start --host 0.0.0.0",
     "copy-images": "cpy \"./docs/marp/**/*.{jpg,png}\" \"./static/marp\"",
-    "prebuild": "marp --html -I ./docs/marp -o ./static/marp/ && yarn copy-images",
+    "build:marp": "marp --html -I ./docs/marp -o ./static/marp/ && yarn copy-images",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
