@@ -5,6 +5,8 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --host 0.0.0.0",
+    "copy-images": "cpy \"./docs/marp/**/*.{jpg,png}\" \"./static/marp\"",
+    "prebuild": "marp --html -I ./docs/marp -o ./static/marp/ && yarn copy-images",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -18,8 +20,10 @@
     "@docusaurus/plugin-google-gtag": "^2.4.1",
     "@docusaurus/plugin-sitemap": "^2.4.1",
     "@docusaurus/preset-classic": "2.4.1",
+    "@marp-team/marp-cli": "^3.4.0",
     "@mdx-js/react": "^1.6.22",
     "clsx": "^1.2.1",
+    "cpy-cli": "^5.0.0",
     "prism-react-renderer": "^1.3.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
