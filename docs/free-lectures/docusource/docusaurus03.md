@@ -34,7 +34,8 @@ jobs:
       - name: Step 2
         run: 실행 명령어
 ---
-name: CI
+# react to gh-pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -43,24 +44,40 @@ on:
 
 jobs:
   build:
-    name: Build and Test
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
           node-version: 14
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
 
-      - name: Run Tests
-        run: npm test
+      - name: Build
+        run: npm run build
 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.6
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+
+# uses : 프리셋  
+# with : 인자값
 ```
 
 ### Point.  
@@ -79,9 +96,9 @@ https://docusaurus.io/docs/deployment#triggering-deployment-with-github-actions
 ![](imge4.excalidraw.png)
 
 
-### 시나리오  
+### CI/CD 시나리오  
 
-1. docusaurus 문서 발행. 
+1. docusaurus 문서 작성  
 2. 커밋 및 저장소 push > Event.   
 3. github actions 발동 > 워크플로우 시작  
 4. gh-pages 에 자동으로 배포  

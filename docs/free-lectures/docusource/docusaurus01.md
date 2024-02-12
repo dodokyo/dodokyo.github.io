@@ -62,6 +62,7 @@ daleseo > https://www.daleseo.com/
 - 튜토리얼 형식의 기술 정리  
 
 캡틴판교 블로그 > https://joshua1988.github.io/   
+> https://joshua1988.github.io/webpack-guide/. 
 - 마켓팅 퍼널 만들기, SEO + 오가닉 유입을 세일즈로 연동    
 
 
