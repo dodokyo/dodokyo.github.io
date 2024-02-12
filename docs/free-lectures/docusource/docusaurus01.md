@@ -45,9 +45,12 @@ showcase 보러가기 > https://docusaurus.io/showcase
 
 ### Best Practice 
 
-daleseo > https://www.daleseo.com/. 
-벨로퍼트와 함께하는 모던 리액트 > https://react.vlpt.us/
-캡틴판교 블로그 > https://joshua1988.github.io/
+daleseo > https://www.daleseo.com/  
+- 사용자 유입 많음 / 가독성 높은 글 쓰는 방법  
+벨로퍼트와 함께하는 모던 리액트 > https://react.vlpt.us/   
+- 튜토리얼 형식의 기술 정리  
+캡틴판교 블로그 > https://joshua1988.github.io/   
+- 마켓팅 퍼널 만들기, SEO + 오가닉 유입을 세일즈로 연동    
 
 
 ## 비교 및 장단점 정리 : Notion, OneNote, 블로그
@@ -87,9 +90,10 @@ docusaurus의 사용 목적 외 다른 문서화 도구를 가져가면 좋다.
 
 ## 강의를 통해서 얻어 갈 내용
 
-- **기본 설정 및 설치:** Docusaurus를 설치하고 기본 설정하는 방법에 대한 안내.
-- **Markdown 활용:** Markdown을 통한 효과적인 글 작성 방법과 문서 스타일링.
-- **React 컴포넌트 활용:** React를 활용하여 블로그 페이지를 개발하고 커스터마이징하는 방법.
-- **SEO 최적화:** Docusaurus의 SEO 기능을 활용하여 블로그를 검색 엔진에 최적화하는 방법.
+- **기본 설정 및 설치:** Docusaurus를 설치하고 기본 설정하는 방법에 대한 안내.  
+- **Markdown 활용:** Markdown을 통한 효과적인 글 작성 방법과 문서 스타일링.   
+- **React 컴포넌트 활용:** React를 활용하여 블로그 페이지를 개발하고 커스터마이징하는 방법.  
+- **SEO 최적화:** Docusaurus의 SEO 기능을 활용하여 블로그를 검색 엔진에 최적화하는 방법.  
+- **CI/CD 구축** CI = github actions, CD = github pages 사용하여 배포하는 방법.    
 
-![](imge2.excalidraw.png)
+![](imge3.excalidraw.png)
