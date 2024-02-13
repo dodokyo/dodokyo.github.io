@@ -84,6 +84,8 @@ docusaurus.config.js
 
 ![Alt text](image-12.png)
 
+### Sitemap.xml 제출하기  
+
 ## 3.SEO Guide
 
 Guide > https://docusaurus.io/docs/seo
