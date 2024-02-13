@@ -9,7 +9,6 @@ sidebar_position: 1
 Docusaurus는 무엇이고, 어떻게 사용되며, 다른 도구들과 비교했을 때 어떤 장단점을 가지고 있는지 알아보도록 하겠습니다.  
 또한, Docusaurus를 활용한 블로그 운영에 대한 강의 내용도 함께 살펴보겠습니다.  
 
-
 ## docusaurus 란 ? 
 
 Docusaurus는 페이스북에서 개발한 오픈 소스 문서화 도구로, 주로 개발자들이 프로젝트와 관련된 문서를 쉽게 작성하고 유지보수할 수 있도록 도와줍니다.  
@@ -108,5 +107,8 @@ docusaurus의 사용 목적 외 다른 문서화 도구를 가져가면 좋다.
 - **React 컴포넌트 활용:** React를 활용하여 블로그 페이지를 개발하고 커스터마이징하는 방법.  
 - **SEO 최적화:** Docusaurus의 SEO 기능을 활용하여 블로그를 검색 엔진에 최적화하는 방법.  
 - **CI/CD 구축** CI = github actions, CD = github pages 사용하여 배포하는 방법.    
+
+Repo : https://github.com/7code-group/7code-group.github.io.  
+Live : https://7code-group-2.github.io.  
 
 ![](imge3.excalidraw.png)

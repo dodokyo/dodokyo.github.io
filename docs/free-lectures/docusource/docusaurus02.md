@@ -48,3 +48,14 @@ yarn start
 
 ![Alt text](image-3.png)
 
+
+## github repo init 
+
+```
+// git init & commit 
+git init
+git remote add upstream git@github.com-dodokyo:7code-group/7code-group.github.io.git
+git add --all . 
+git commit -m "init"
+git push upstream main
+```

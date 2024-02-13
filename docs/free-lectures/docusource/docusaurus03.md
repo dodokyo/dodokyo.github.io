@@ -104,18 +104,6 @@ https://docusaurus.io/docs/deployment#triggering-deployment-with-github-actions
 4. gh-pages 에 자동으로 배포  
 
 
-
-## github repo init 
-
-```
-// git init & commit 
-git init
-git remote add upstream git@github.com-dodokyo:7code-group/7code-group.github.io.git
-git add --all . 
-git commit -m "init"
-git push upstream main
-```
-
 ## github actions workflow 추가
 
 공식문서의 내용을 아래에 경로에 붙여 넣자.  
