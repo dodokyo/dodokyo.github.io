@@ -60,8 +60,10 @@ Markdown으로 PPT를 만들 수 있는 도구
 ![Alt text](image-8.png)
 
 ```
+# install
 yarn add @marp-team/marp-cli cpy-cli
 
+# add scripts
 ---
   "scripts": {
     ...
