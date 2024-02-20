@@ -116,6 +116,12 @@ const config = {
           },
           {
             type: "docSidebar",
+            sidebarId: "nextHandbook",
+            position: "left",
+            label: "🎧 NextJS YT Music 클론코딩",
+          },
+          {
+            type: "docSidebar",
             sidebarId: "dockerHandbook",
             position: "left",
             label: "🏗️ Docker 핸드북",
