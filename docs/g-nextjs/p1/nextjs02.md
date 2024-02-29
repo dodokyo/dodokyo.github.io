@@ -41,7 +41,7 @@ eg) https://music.youtube.com/channel/UCH-aM6ae8RUTNtNGwrKI3Fg
 
 
 
-## 1.1 NextJS 14 설치하기
+## NextJS 14 설치하기
 
 - VSCode 설치 > https://code.visualstudio.com/.  
 - node.js 설치 > https://nodejs.org/en.  
@@ -94,7 +94,7 @@ yarn add next-themes
 
 ```
 
-## 1.2 라이브러리 소개
+## 라이브러리 소개
 
 
 1. **Next.js 14:**
@@ -104,20 +104,28 @@ yarn add next-themes
 2. **Tailwind CSS:**
    - Tailwind CSS는 클래스 기반의 유틸리티 퍼스트(CSS Utility-First) 프레임워크
    - HTML 클래스에 직접 스타일을 적용하여 디자인을 구축
+   - https://tailwindcss.com/docs/installation
 
 3. **Radix UI:**
    - Radix UI는 저수준(UI primitives) 컴포넌트를 제공하는 라이브러리   
    - 컴포넌트를 많이 분리해두어서 커스터마이징이 거의 다 된다.    
    - tailwind css 지원  
+   - https://www.radix-ui.com/primitives/docs/overview/introduction
 
 4. **Shadcn:**
    - Shadcn은 그림자 및 빛 효과를 생성하기 위한 CSS 클래스 유틸리티 라이브러리
    - radix ui 기반 컴포넌트 라이브러리 제공 + tailwind css 지원   
+   - https://www.radix-ui.com/primitives/docs/overview/introduction
 
 5. **React-Spinners, React-Icons**
    - React-Spinners는 리액트 애플리케이션에서 로딩 스피너
    - React-Icons는 다양한 아이콘
+   - https://ui.shadcn.com/
 
 ## 실습완료 - 실행
+
+- github 올리기
+- window : https://codechacha.com/ko/git-add-ssh-key-in-windows/
+- mac : https://data-jj.tistory.com/78#google_vignette
 
 
