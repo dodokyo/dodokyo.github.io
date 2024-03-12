@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # 2.NextJS 배포하기
 
-## CI/CD
+## CI/CD 란?
 
 **CI/CD (지속적 통합 및 지속적 배포):**
 
@@ -29,5 +29,5 @@ CI/CD는 소프트웨어 개발 프로세스를 자동화하고 지속적인 업
 
 - 가장 쉬운 방법  
 
-## 실습 - Vercel github 연결
+## 실습 - Vercel github 연결하여 배포해보기  
 

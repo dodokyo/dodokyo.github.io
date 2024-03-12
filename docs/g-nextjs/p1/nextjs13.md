@@ -1,7 +1,7 @@
 ---
-sidebar_position: 10
+sidebar_position: 13
 ---
 
-# 9.YTMusicClone - Library
+# 12.YTMusicClone - Player 
 
 https://velog.io/@hanei100/ReactElement-vs-ReactNode-vs-JSX.Element#reactelement-vs-reactnode-vs-jsxelement

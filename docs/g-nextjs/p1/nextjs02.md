@@ -47,7 +47,7 @@ eg) https://music.youtube.com/channel/UCH-aM6ae8RUTNtNGwrKI3Fg
 - node.js 설치 > https://nodejs.org/en.  
 - yarn 설치 ``` npm install yarn -g ```.  
 
-### vscode extension.  
+### vscode extension 설치 목록  
 
 https://open-vsx.org/extension/dsznajder/es7-react-js-snippets.  
 https://open-vsx.org/extension/dbaeumer/vscode-eslint.  
@@ -94,6 +94,38 @@ yarn add next-themes
 
 ```
 
+
+
+
+## 실습 - nextjs 실행
+
+- github 올리기
+- window : https://codechacha.com/ko/git-add-ssh-key-in-windows/
+- mac : https://data-jj.tistory.com/78#google_vignette
+
+---
+
+## 오류 대응
+
+### 애러) TS버전 선택 이슈  
+
+- VS Code 버전이 다르신 분을 아래 처럼 버전선택이 가능합니다.
+
+![Alt text](image-11.png)
+
+### 애러) Cannot find module해결 방법
+
+![Alt text](image-13.png)
+
+1) 위 그림의 No tsconfig 경로 문제입니다.
+
+![Alt text](image-14.png)
+
+2) tsconfig 파일에 공백을 하나 추가하고 다시 저장해주시면 포멧팅이 되며 해결 됩니다.   
+*혹은 경로를 재설정 해주세요.  
+
+---
+
 ## 라이브러리 소개
 
 
@@ -121,11 +153,3 @@ yarn add next-themes
    - React-Spinners는 리액트 애플리케이션에서 로딩 스피너
    - React-Icons는 다양한 아이콘
    - https://ui.shadcn.com/
-
-## 실습완료 - 실행
-
-- github 올리기
-- window : https://codechacha.com/ko/git-add-ssh-key-in-windows/
-- mac : https://data-jj.tistory.com/78#google_vignette
-
-
