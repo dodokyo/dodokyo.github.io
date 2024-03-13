@@ -64,6 +64,7 @@ https://tailwindcss.com/docs/responsive-design
 
 ## 6.9 Header > 반응형 만들기3
 
+
 ### 고도화 - 스크롤 이벤트에 디바운싱 걸기  
 
 힌트 :  
@@ -120,6 +121,6 @@ export default ScrollComponent;
 이 예제는 스크롤 위치를 추적하고, 스크롤 이벤트가 발생할 때마다 스크롤 위치를 갱신합니다. 그러나 디바운싱 함수를 통해 스크롤 이벤트 핸들러가 호출되는 속도를 제어하여 성능을 최적화합니다.
 
 
-## 완료된 코드  
+## 체크포인트 코드  
 
 https://github.com/dodokyo/yt-music-clone/tree/ch6-done

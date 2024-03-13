@@ -41,6 +41,49 @@ File-based metadata
 - params(Dynamic Routes) vs searchParams    
 
 
+### 강의 노트 - tsx vs jsx 파일 차이
+
+TSX 파일과 JSX 파일은 둘 다 리액트 애플리케이션에서 사용되는 파일 형식입니다. 그러나 두 형식에는 약간의 차이가 있습니다.
+
+1. **JSX (JavaScript XML)**:
+   - JSX는 자바스크립트의 확장 문법으로, JavaScript 코드 안에 마크업을 작성할 수 있게 해줍니다.
+   - JSX 파일은 일반적으로 .jsx 확장자를 가집니다.
+   - JSX 파일 안에서는 JavaScript 코드와 HTML(또는 XML) 코드가 혼합되어 있습니다.
+
+예시:
+```jsx
+import React from 'react';
+
+function MyComponent() {
+  return <div>Hello, World!</div>;
+}
+
+export default MyComponent;
+```
+
+2. **TSX (TypeScript XML)**:
+   - TSX는 TypeScript의 확장 문법으로, JSX와 유사하지만 TypeScript의 정적 타입 검사 기능을 사용할 수 있습니다.
+   - TSX 파일은 일반적으로 .tsx 확장자를 가집니다.
+   - TSX 파일 안에서는 JavaScript 코드와 HTML(또는 XML) 코드가 혼합되어 있으면서 TypeScript의 타입 어노테이션을 추가할 수 있습니다.
+
+예시:
+```tsx
+import React from 'react';
+
+interface MyComponentProps {
+  name: string;
+}
+
+const MyComponent: React.FC<MyComponentProps> = ({ name }) => {
+  return <div>Hello, {name}!</div>;
+}
+
+export default MyComponent;
+```
+
+따라서 JSX 파일은 일반적으로 자바스크립트 프로젝트에서 사용되고, TSX 파일은 TypeScript를 사용하는 프로젝트에서 사용됩니다. TSX 파일은 정적 타입 검사를 통해 코드의 안정성을 높일 수 있습니다.
+
+
 ### 더 알아보기  
 
 [Dynamic Routes](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes)
@@ -68,6 +111,7 @@ Root Layout vs Nesting Layouts
 ### 설명해보기  
 
 - 서버 컴포넌트 아닌 경우 로딩 에니메이션이 안나오는 이유  
+
 
 ### 더 알아보기
 
