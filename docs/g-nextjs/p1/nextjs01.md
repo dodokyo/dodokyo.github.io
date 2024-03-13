@@ -72,9 +72,10 @@ react-icons
 ![Alt text](image-22.png)
 
 재현에 필요한 개념  
-- flex, font-size, colo, margin 등 css 개념   
+- flex, font-size, color, margin 등 css 개념   
 - react component 만들기  
 - next Image 컴포넌트 사용법  
+- 아이콘 고르고 import하는 방법  
 
 
 
