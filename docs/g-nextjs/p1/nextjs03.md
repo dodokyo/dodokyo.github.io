@@ -4,6 +4,15 @@ sidebar_position: 3
 
 # 2.NextJS 배포하기
 
+## Goal
+
+- Vercel 자동 배포
+
+### 복습 포인트
+
+- 프로젝트를 Vercel에 배포 직접 해보기. 
+
+
 ## CI/CD 란?
 
 **CI/CD (지속적 통합 및 지속적 배포):**

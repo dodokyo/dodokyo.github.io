@@ -4,7 +4,13 @@ sidebar_position: 2
 
 # 1.NextJS 14 설치하기
 
+## Goal
+- VS Code 설정
+- Next.js 설치 및 초기 셋팅
 
+### 복습 포인트
+
+- 프로젝트 초기 설정을 직접 해보세요.! 
 
 ## 클론할 YT Music 살펴보기
 

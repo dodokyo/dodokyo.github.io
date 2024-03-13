@@ -4,8 +4,19 @@ sidebar_position: 4
 
 # 3.NextJS 핵심 개념 (이론)
 
-## 3.1 HTML+CSS+JS vs React.js vs Next.js 차이점
 
+## Goal
+
+- 랜더링 변천사 이해하기  
+- TailwindCSS 기초 학습하기  
+
+### 복습 포인트
+
+- 프로젝트에 딱 필요한 TailwindCSS 정리 
+- 신호등 픽토그램 스스로 구현 
+
+
+## 3.1 HTML+CSS+JS vs React.js vs Next.js 차이점
 
 HTML + CSS + Vanilla JS:
 - 기본기 > 작은 프로젝트나 간단한 웹 페이지
@@ -36,42 +47,30 @@ Next.js:
 
 ![alt](./figure.excalidraw.png)
 
+
+### 더 알아보기
+
+[브라우저의 렌더링 과정](https://medium.com/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98%ED%92%88%EA%B2%A9/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%A0%8C%EB%8D%94%EB%A7%81-%EA%B3%BC%EC%A0%95-5c01c4158ce)
+
+
 ## 3.3 컴포넌트 종류 - RSC, RCC, use client
 
+### Goal
+
+- RSC,RCC 2개 비교하기  
+- 서버 컴포넌트, 클라이언트 컴포넌트는 각각 언제 사용하는가?  
+- 'use client'의 진정한 의미    
 
 ![alt](./figure2.excalidraw.png)
 ![alt](./figure3.excalidraw.png)
 
+### 더 알아보기
+[When to use Server and Client Components?](https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#when-to-use-server-and-client-components)
+
+
 ## 3.4 React Suspense ( Streaming, Progressive Hydration )
 
 ![alt](./figure1.excalidraw.png)
-
-
-## 3.5 TailwindCSS 정리1
-
-## 3.6 TailwindCSS 정리2
-
-## 3.7 TailwindCSS 정리3 - 예제
-
-
----
-
-## NextJS 란?	
-
-
-## 랜더링의 종류 (CSR, SSR, hydration)
-
-
-### RSC,RCC,'use client'
-
-> https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#when-to-use-server-and-client-components
-- 2개 비교하기
-- 언제 사용하는가
-- 'use client'의 진정한 의미  
-
-
-### React Suspense ( Loading UI and Streaming )
-> https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming#example
 
 *Selective Hydration을 가능하게 만드는 핵심 
 
@@ -85,7 +84,7 @@ import { PostFeed, Weather } from './Components'
  
 export default function Posts() {
   return (
-    <section>
+    <section>  
       <Suspense fallback={<p>Loading feed...</p>}>
         <PostFeed />
       </Suspense>
@@ -96,7 +95,7 @@ export default function Posts() {
   )
 }
 ```
-
+ 
 클라이언트 컴포넌트에서의 React Suspense
 - 비동기적으로 데이터를 불러오는 동안 사용자에게 로딩 상태를 표시
 - fallback 컴포넌트를 렌더링할 수 있습니다. 
@@ -119,26 +118,181 @@ function ClientComponent() {
 export default ClientComponent;
 ```
 
-### pageRouter vs appRouter
 
-- pageRouter : hydration ( getServerSideProps(), getStaticProps(), getStaticPaths )
-  - 전체 페이지 로딩이 되어야, hydration 시작   
-- appRouter : 서버 컴포넌트 (suspense) + selective hydration
+### 더 알아보기
 
-### FullPage Loading, SubPage Loading, Subsequent Navigations
+[Streaming with Suspense](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming#example)  
+[pageRouter vs appRouter 비교](https://www.jadru.com/diffrent-approuter-and-pagerouter)  
+[How are Client Components Rendered?](https://nextjs.org/docs/app/building-your-application/rendering/client-components#how-are-client-components-rendered)  
+- FullPage Loading vs Subsequent Navigations  
+[Dynamic Routes, Generating Static Params, Parallel Routes, Intercepting Routes](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#generating-static-params)  
 
+## 3.5 TailwindCSS 정리1
 
-- 2개의 차이점 
+### playground
 
-https://nextjs.org/docs/app/building-your-application/rendering/client-components#how-are-client-components-rendered
-
-
-### Dynamic Routes, Generating Static Params, Parallel Routes, Intercepting Routes
-
-> https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#generating-static-params
+아래 사이트에서 연습이 가능하다.  
+- https://play.tailwindcss.com/
 
 
----
+### 단위체계
 
-## 
-- File Conventions"
+tailwind css 에서는 rem 단위를 사용한다.  
+- 1은 0.25 rem, 4는 1rem 이다. 
+- 디폴트 값으로 1rem은 16px이다. 
+- 고정된 px단위도 사용 가능하다.  
+
+```js
+# gap-1 은 0.25rem 만큼 떨어진다. 
+# px단위는 []을 이용해서 사용한다.  
+<div class="flex flex-row gap-1 gap-[5px]">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+```
+
+## 3.6 TailwindCSS 정리2
+
+
+### bg, border, border-color, rounded
+
+```js
+className="bg-red-200"
+className="bg-red-200 bg-opacity-50"
+className="border border-solid border-red-300"
+className="border-2 border-red-300"
+className="rounded-full"
+className="border border-transparent rounded-full"
+className="cursor-pointer rounded-full hover:opacity-75 transition"
+
+eg)
+<div class="h-40 w-40 cursor-pointer rounded-full border border-transparent bg-red-200 transition-colors hover:bg-red-300"></div>
+
+```
+### w, h, p, m 
+
+```js
+# extrinsic 
+className="h-auto h-5 h-[40px]"
+# intrinsic - 내부 요소에 의해 크기 결정
+className="h-fit h-min h-max"
+className="w-auto w-full w-5 w-[40px]"
+className="p-8 p-[40px] px-8 py-8"
+className="m-8 m-[40px] mx-8 my-8"
+```
+
+### text-color, text-size, font-bold, cursor
+
+```js
+# color
+className="text-green-500"
+
+# font-size (text-sm, text-md, text-lg..)
+className="text-sm text-md text-2xl text-[50px]"
+
+# weight, font-bold(700)
+className="font-medium font-[500] font-bold font-[700]"
+
+className="cursor-pointer"
+```
+
+### flex, flex-col, justify, items, gap
+
+```js
+# display:flex
+className="flex"
+
+# justify-content(main-axis)
+className="flex justify-between"
+
+# align-items(cross-axis)
+className="flex items-center"
+
+# direction
+className="flex flex-row"
+className="flex flex-col"
+
+# gap
+className="flex flex-col gap-y-4"
+
+# flex:1 1 0%
+className="flex flex-1"
+
+# eg)
+<div class="flex flex-row items-center justify-between gap-[5px]">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+
+### hover, transition, :disabled
+
+```js
+className="transition"
+className="hover:text-white"
+className="disabled:cursor-not-allowed disabled:opacity-50"
+```
+
+
+### eg) Next Image + gradient
+
+```js
+const Header = () => {
+  return (
+    <div className="w-full h-[400px] relative">
+      <Image
+        alt="MediaItem "
+        className="object-cover"
+        fill
+        src={
+          "https://images.unsplash.com/photo-1707833558984-3293e794031c?q=80&w=2033&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      />
+      <div className="w-full h-full bg-black opacity-40 absolute top-0"></div>
+      <div className="w-full h-full absolute top-0 bg-gradient-to-t from-black"></div>
+    </div>
+  );
+};
+
+```
+
+## 3.7 TailwindCSS 정리3 - 예제
+
+
+
+### eg) 픽토그램 - 신호등, 횡단보드 
+
+```js
+<!-- eg) 픽토그램 - 신호등, 횡단보드  -->
+
+<div class="group flex h-[250px] w-full flex-row items-center justify-between bg-black">
+  <div class="flex flex-row gap-4 group-hover:bg-pink-300">
+    <div class="h-[150px] w-4 bg-white"></div>
+    <div class="h-[150px] w-4 bg-white"></div>
+    <div class="h-[150px] w-4 bg-white"></div>
+    <div class="h-[150px] w-4 bg-white"></div>
+    <div class="h-[150px] w-4 bg-white"></div>
+  </div>
+  <div class="flex flex-row items-center justify-center gap-3">
+    <div class="h-40 w-40 rounded-full border-2 border-white bg-red-400 transition hover:bg-red-200"></div>
+    <div class="h-40 w-40 rounded-full border-2 border-white bg-yellow-400 transition hover:bg-yellow-200"></div>
+    <div class="h-40 w-40 rounded-full border-2 border-white bg-green-400 transition hover:bg-green-200"></div>
+  </div>
+  <div class="flex flex-row gap-4 group-hover:bg-yellow-300">
+    <div class="h-[150px] w-4 bg-white"></div>
+    <div class="h-[150px] w-4 bg-white"></div>
+    <div class="h-[150px] w-4 bg-white"></div>
+    <div class="h-[150px] w-4 bg-white"></div>
+    <div class="h-[150px] w-4 bg-white"></div>
+  </div>
+</div>
+```
+
+
+
+
+
