@@ -48,10 +48,25 @@ Next.js:
 ![alt](./figure.excalidraw.png)
 
 
+Streaming Server Side Rendering : Page를 부분적으로 나누어서 SSR을 진행 후, 완성되는 순서대로 사용자 화면에 뿌려준다.  
+- Progressive Hydration : 이는 점진적인 hydration 과정이 필요함    
+- Selective Hydration : 우선순위가 높은 UI 먼저 hydration  
+- Partial Hydration : 일부분만 hydration 진행  
+- *전체 페이지를 쪼개서 각자의 랜더링을 싸이클이 진행될 수 있는 이유는 React Suspense 덕분.   
+
 ### 더 알아보기
 
-[브라우저의 렌더링 과정](https://medium.com/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98%ED%92%88%EA%B2%A9/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%A0%8C%EB%8D%94%EB%A7%81-%EA%B3%BC%EC%A0%95-5c01c4158ce)
+[브라우저의 렌더링 과정](https://medium.com/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98%ED%92%88%EA%B2%A9/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%A0%8C%EB%8D%94%EB%A7%81-%EA%B3%BC%EC%A0%95-5c01c4158ce)  
+- 브러우저의 랜더링 과정을 이해하고 설명해보기  
 
+[nextjs 공식 문서 - streaming](https://nextjs.org/learn/dashboard-app/streaming#streaming-a-component)   
+- 핵심은 다음 2가지 입니다.!  
+
+```
+There are two ways you implement streaming in Next.js:  
+1.At the page level, with the loading.tsx file.
+2.For specific components, with <Suspense>.
+```
 
 ## 3.3 컴포넌트 종류 - RSC, RCC, use client
 
@@ -126,6 +141,7 @@ export default ClientComponent;
 [How are Client Components Rendered?](https://nextjs.org/docs/app/building-your-application/rendering/client-components#how-are-client-components-rendered)  
 - FullPage Loading vs Subsequent Navigations  
 [Dynamic Routes, Generating Static Params, Parallel Routes, Intercepting Routes](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#generating-static-params)  
+[New Suspense SSR Architecture in React 18](https://github.com/reactwg/react-18/discussions/37)   
 
 ## 3.5 TailwindCSS 정리1
 

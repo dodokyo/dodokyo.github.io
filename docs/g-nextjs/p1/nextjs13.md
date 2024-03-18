@@ -61,6 +61,25 @@ yarn add react-use
 
 ## 12.12 autoNextPlay
 
+### 추가 설명 - 슬라이더에 max값을 전달해야 하는 이유  
+
+max 값을 전달하지 않으면 슬라이더는 기본적으로 0부터 100까지 범위를 가지는 슬라이더 입니다.  
+- 그래서 슬라이더의 핸들을 끝까지 미뤘을때 100이라는 숫자까지 갔었죠.  
+- 그래서 노래의 100초 부분으로 옮겨갔어요.  
+- 이는 노래의 끝은 아닙니다. 그래서 다음 노래로 재생을 못했어요.  
+
+```js
+      <PlayerSlider
+          className="w-full"
+          defaultValue={[0]}
+          value={[state.time]}
+          onValueChange={(value) => {
+            controls.seek(value);
+          }}
+          max={state.duration}
+        />
+```
+
 ## 12.13 Player UI 연동1
 
 ## 12.14 Player UI 연동2

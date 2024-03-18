@@ -98,6 +98,9 @@ group folder
 
 [nextjs RouteGroup](https://nextjs.org/docs/app/building-your-application/routing/route-groups)
 
+[nextjs app-router playground](https://app-router.vercel.app)  
+- *AppRouter에 대해서 익숙해지는 시간을 가져봅시다.!  
+
 ## 4.4 layout file
 
 ### 더 알아보기
