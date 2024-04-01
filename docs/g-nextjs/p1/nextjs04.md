@@ -138,9 +138,7 @@ export default ClientComponent;
 
 [Nextjs 공식문서 - Streaming with Suspense](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming#example)   
 [Nextjs 공식문서 - How are Client Components Rendered?](https://nextjs.org/docs/app/building-your-application/rendering/client-components#how-are-client-components-rendered)   
-- FullPage Loading vs Subsequent Navigations    
 [Nextjs 공식문서 - Dynamic Routes, Generating Static Params, Parallel Routes, Intercepting Routes](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#generating-static-params)     
-
 [아티클 - Next.js 13부터의 App Router와 기존 Page Router의 차이 비교](https://www.jadru.com/diffrent-approuter-and-pagerouter)   
 [아티클 - New Suspense SSR Architecture in React 18](https://github.com/reactwg/react-18/discussions/37)  
 

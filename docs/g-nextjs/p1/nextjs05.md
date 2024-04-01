@@ -97,9 +97,14 @@ group folder
 ### 더 알아보기 
 
 [nextjs RouteGroup](https://nextjs.org/docs/app/building-your-application/routing/route-groups)
-
 [nextjs app-router playground](https://app-router.vercel.app)  
 - *AppRouter에 대해서 익숙해지는 시간을 가져봅시다.!  
+
+
+### 📌 면접 연습 - Next.js 에서는 DataFetching 전략에 따라서 아래 4가지 방식으로 SSR을 구현 합니다. 그 차이점이 무엇인가요?  
+
+- Streaming with Suspense, Static Data, Dynamic Data, Incremental Static Regeneration
+- Refs : https://app-router.vercel.app/streaming
 
 ## 4.4 layout file
 
@@ -111,9 +116,11 @@ Root Layout vs Nesting Layouts
 
 ## 4.5 loading, error
 
-### 설명해보기  
+### 📌 설명해보기 - 애니메이션 컴포넌트 라이브러리가 동작이 안됩니다.
 
-- 서버 컴포넌트 아닌 경우 로딩 에니메이션이 안나오는 이유  
+- 애니메이션 동작 여부는 useState로 관리되는 라이브러리 에요.
+- 서버사이드 랜더링 이후 애니메이션이 작동하지 않아요.
+- 어떻게 해결할 수 있나요?
 
 
 ### 더 알아보기
