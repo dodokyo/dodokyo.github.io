@@ -108,7 +108,7 @@ docusaurus의 사용 목적 외 다른 문서화 도구를 가져가면 좋다.
 - **SEO 최적화:** Docusaurus의 SEO 기능을 활용하여 블로그를 검색 엔진에 최적화하는 방법.  
 - **CI/CD 구축** CI = github actions, CD = github pages 사용하여 배포하는 방법.    
 
-Repo : https://github.com/7code-group/7code-group.github.io.  
-Live : https://7code-group-2.github.io.  
+Repo : https://github.com/7code-group/7code-group.github.io  
+Live : https://7code-group.github.io
 
-![](imge3.excalidraw.png)
+![altImage](imge3.excalidraw.png)

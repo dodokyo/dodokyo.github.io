@@ -13,6 +13,7 @@ sidebar_position: 10
   - [4.3 marp](#43-marp)
     - [marp란 ?](#marp란-)
     - [install extension for viewer](#install-extension-for-viewer)
+    - [docusaurus와 함께 배포하기](#docusaurus와-함께-배포하기)
   - [4.4 마치며](#44-마치며)
 
 
@@ -58,6 +59,12 @@ Markdown으로 PPT를 만들 수 있는 도구
 ### install extension for viewer
 
 ![Alt text](image-8.png)
+
+### docusaurus와 함께 배포하기  
+
+- Marp CLI를 통해 빌드하면 PPT를 html 파일로 컴파일 할 수 있다.  
+- 예 : https://7code-group.github.io/marp/gpts/  
+- 코드 : https://github.com/7code-group/7code-group.github.io/tree/main/docs/marp  
 
 ```
 # install

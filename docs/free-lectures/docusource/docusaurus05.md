@@ -6,6 +6,7 @@ sidebar_position: 5
 # 3.1 예시글 발행(예)
 
 - [3.1 예시글 발행(예)](#31-예시글-발행예)
+  - [아래 구분선 아래는 예시글 입니다.](#아래-구분선-아래는-예시글-입니다)
   - [Goal](#goal)
   - [1. create-next-app](#1-create-next-app)
     - [eg](#eg)
@@ -18,6 +19,11 @@ sidebar_position: 5
   - [2.2 yarn berry migration](#22-yarn-berry-migration)
   - [ref](#ref)
 
+## 아래 구분선 아래는 예시글 입니다.  
+
+참고 Code : https://github.com/dodokyo/dodokyo.github.io/blob/main/docs/free-lectures/docusource/docusaurus05.md
+
+---
 
 ## Goal 
 

@@ -14,10 +14,14 @@ sidebar_position: 6
   - [3.docusaurus.config.js 추가](#3docusaurusconfigjs-추가)
 
 
-docs 폴더를 여러개의 하위 그룹으로 나누어서 문서화를 진행하고자 한다.  
+docusaurus 기본 설정으로는 docs안에 모든 마크다운 파일이 하나의 navbar item에 담겨있다.   
+- docs 폴더를 여러개의 하위 그룹으로 나누어서 문서화를 진행하고자 한다.   
+- FE관련 지식, BE 관련 지식을 따로 관리 해보자.  
 
 참고 Repo : https://github.com/7code-group/7code-group.github.io. 
 > https://7code-group.github.io  
+
+아래의 3단계를 통해서 진행한다.  
 
 ## 1.docs 그룹 폴더 만들기
 
