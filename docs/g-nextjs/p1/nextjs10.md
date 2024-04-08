@@ -6,13 +6,13 @@ sidebar_position: 10
 
 ## Goal
 
-- Library 페이지 완성  
+- Library 페이지를 완성합니다.   
 
 ### 복습 포인트
 
 ![Alt text](image-38.png)  
-1.Dropdown 컴포넌트 사용해보기  
-2.Grid 레이아웃으로 재활용 하기  
+1.shadCn UI의 Dropdown 컴포넌트를 사용해 봅니다.   
+2.Grid 레이아웃을 활용해서 PlayList 화면을 만들어 봅니다. 
 
 
 ## 9.1 dropdownmenu

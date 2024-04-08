@@ -65,7 +65,12 @@ https://tailwindcss.com/docs/responsive-design
 ## 6.9 Header > 반응형 만들기3
 
 
-### 고도화 - 스크롤 이벤트에 디바운싱 걸기  
+### 📌 리펙토링 - 스크롤 이벤트에 디바운싱 걸기  
+
+스크롤 이벤트는 콘솔로그를 찍어보면 매우 많이 발생하고 있습니다.  
+- 이는 성능저하의 원인이 될 수 있어요.   
+- 최적화를 해주세요. with 디바운싱   
+- 그리고 쓰로틀링(throttling)과 디바운싱(debouncing) 차이점은 무엇인가요?   
 
 힌트 :  
 
@@ -120,6 +125,8 @@ export default ScrollComponent;
 
 이 예제는 스크롤 위치를 추적하고, 스크롤 이벤트가 발생할 때마다 스크롤 위치를 갱신합니다. 그러나 디바운싱 함수를 통해 스크롤 이벤트 핸들러가 호출되는 속도를 제어하여 성능을 최적화합니다.
 
+참고  
+- https://www.zerocho.com/category/JavaScript/post/59a8e9cb15ac0000182794fa
 
 ## 체크포인트 코드  
 

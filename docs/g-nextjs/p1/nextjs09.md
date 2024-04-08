@@ -6,11 +6,13 @@ sidebar_position: 9
 
 ## Goal
 
-- explore 페이지 완성  
+- explore 페이지를 완성 합니다.  
 
 ### 복습 포인트
 
-![Alt text](image-34.png)  
+*강의를 안보고 아래 컴포넌트를 만들어 봅니다.  
+
+![Alt text](image-34.png)   
 1.반응형 카테고리 메뉴 만들기  
 
 ![Alt text](image-36.png)  
