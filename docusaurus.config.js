@@ -120,11 +120,17 @@ const config = {
             position: "left",
             label: "🎧 NextJS YT Music 클론코딩",
           },
+          // {
+          //   type: "docSidebar",
+          //   sidebarId: "dockerHandbook",
+          //   position: "left",
+          //   label: "🏗️ Docker 핸드북",
+          // },
           {
             type: "docSidebar",
-            sidebarId: "dockerHandbook",
+            sidebarId: "nextjsSupa",
             position: "left",
-            label: "🏗️ Docker 핸드북",
+            label: "🔋Supa NextJS",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
