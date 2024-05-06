@@ -6,11 +6,11 @@ sidebar_position: 1
 
 Goal  
 - Supabase를 서비스를 이해  
-- todoList 테이블을 생성 및 데이터를 조회할 수 있다.  
+- TodoList 테이블을 생성 및 데이터를 조회할 수 있다.   
 
 
 
-## Supabase 란 ?
+## 1.Supabase 란 ?
 
 >https://supabase.com/docs
 
@@ -38,7 +38,18 @@ AI 및 벡터:
   - Classifications: how do we categorize a body of text?  
   - Clustering: how do we identify trends?  
 
-### 비교: Supabase vs Firebase  
+
+
+## 2.Supabase는 든든한 백엔드 지원군  
+
+```전후 비교 다이어 그램 ```  
+![alt](./figure01.excalidraw.png)
+
+
+## 3.Supabase vs Firebase  
+
+```Supabase vs Firebase 비교 ```  
+![alt](./figure02.excalidraw.png)
 
 DB : 
 - PostgreSQL 데이터베이스 : PostgreSQL은 대규모 엔터프라이즈 애플리케이션에서 수년 동안 사용되어 왔으며 많은 개발자의 신뢰를 받고 있습니다.  
@@ -53,22 +64,17 @@ DB :
 - 먼저 Supabase는 오픈 소스 플랫폼으로 사용자가 소스 코드를 검토하고 수정할 수 있어 더 큰 투명성과 제어를 제공합니다. 반면에 Firebase는 제한된 맞춤설정 수준을 가진 독점 플랫폼입니다.  
 - Supabase를 직접 내 서버에 구축할 수 있다. with Docker   
 
-
 실시간 업데이트:
 - Supabase와 Firebase는 모두 각자의 구독 시스템을 통해 실시간 업데이트를 제공합니다. 그러나 Supabase는 PostgreSQL에 내장된 LISTEN/NOTIFY 메커니즘을 사용하므로 Firebase의 실시간 데이터베이스에 비해 더 효율적이고 유연한 실시간 업데이트가 가능합니다.
 
 
-
-ref : [Firebase와 Supabase: 어느 것을 선호해야 하며 그 이유는 무엇입니까?](https://medium.com/@bishtnarottam/firebase-vs-supabase-which-one-you-should-prefer-and-why-c3b2334c9604)
-
-
-
-## Supabase는 든든한 백엔드 지원군  
-
-```TODO 전후 비교 다이어 그램 ```
+ref : [Firebase와 Supabase: 어느 것을 선호해야 하며 그 이유는 무엇입니까?](https://medium.com/@bishtnarottam/firebase-vs-supabase-which-one-you-should-prefer-and-why-c3b2334c9604)  
+[Supabase 또는 Firebase: 2023년 프로젝트에 적합한 도구는 무엇입니까?](https://www.linkedin.com/pulse/supabase-firebase-which-right-tool-your-project-2023-rahul-malik/)   
+[파이어베이스를 쓰지 말아야 할 이유](https://blog.naver.com/raveneer/221002040963) 
 
 
-## Supabase의 가격 정책 Pricing  
+
+## 4.Supabase의 가격 정책 Pricing  
 > https://supabase.com/pricing
 
 - 시작은 FREE 이다.!   
@@ -86,9 +92,9 @@ Free 버전에서 문제
 - Daily backups stored for 7 days
 - 7-day log retention  
 
-## Supabase의 RLS (Row-Level Security)
+## 5.Supabase의 RLS (Row-Level Security)
 
-
+![alt](./figure03.excalidraw.png)
 Supabase의 RLS는 "Row-Level Security"의 약자. 
 - 데이터베이스 테이블의 행에 대한 보안을 관리하는 기능
 - 사용자 또는 역할이 특정 행에 접근할 수 있는지 여부를 제어.  
@@ -139,12 +145,33 @@ BFLA - Broken Function Level Authorization
 ref : [11개 API 취약점](https://jusths.tistory.com/330)
 
 
-## Supabase 시작하기 (조직 만들기, 프로젝트 만들기)  
+## 6.Supabase 시작하기 (조직 만들기, 프로젝트 만들기)  
 
-## todolist 테이블 만들기
+## 7.Todolist (with no RLS) 테이블 만들기  
 
-## supbase 사용해보기 with TableEditor
+![Alt text](image-1.png)
 
-## supbase 사용해보기 with SQL Editor
+## 8.Supbase TableEditor 사용해보기 with suapAI 
 
-## DBeaver connection 해보기
+![Alt text](image.png)
+
+## 9.Supbase SQL Editor 사용해보기 
+
+
+```sql
+-- R
+select * from  todos_no_rls;
+select * from todos_no_rls where deleted_at is null ;
+
+-- C
+insert into todos_no_rls (content) values  ('Add todos_no_rls content');
+
+-- U
+update todos_no_rls set content = 'Updated content' where  id = 2;
+update todos_no_rls set deleted_at = now() where  id = 3;
+
+-- D
+delete from todos_no_rls where  id = 2;
+```
+
+## 10.DBeaver로 supabase connection 해보기

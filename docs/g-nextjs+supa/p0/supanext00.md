@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# 0.Supabase, Next 기본기 다지기 (feat. 슈파베이스 Auth,nextjs 풀스택)
+# 0.Supabase, Next 시작하기 (feat. 슈파베이스 Auth,nextjs 풀스택)
 
 
 ## 1. 완성본 미리 보기
