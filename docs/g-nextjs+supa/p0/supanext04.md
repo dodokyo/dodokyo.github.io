@@ -4,8 +4,13 @@ sidebar_position: 4
 
 # 4.Supabase install to next.js  
 
+Goal  
+- Next.js 프로젝트에 Supabase를 연결합니다.  
+- 타입스크립트 제너레이터를 다룰 수 있습니다.  
 
 ## 4.1 supabase API key    
+
+### 📌 면접연습 - Supabase의 anon(public) key 와 service role key 에 차이점에 대해서 설명해주세요.  
 
 ## 4.2 env설정  
 
@@ -15,7 +20,6 @@ sidebar_position: 4
 NEXT_PUBLIC_SUPABASE_URL=xxxx
 NEXT_PUBLIC_SUPABASE_ANON_KEY=xxxx
 ```
-
 
 ## 4.3 "3.Generating TypeScript Types
 

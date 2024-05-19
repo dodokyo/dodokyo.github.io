@@ -5,16 +5,17 @@ sidebar_position: 1
 # 1.Supabase Concepts
 
 Goal  
-- Supabase를 서비스를 이해  
-- TodoList 테이블을 생성 및 데이터를 조회할 수 있다.   
-
-
+- Supabase를 서비스를 이해 합니다.  
+- TodoList 테이블을 생성 및 데이터를 조회할 수 있습니다. 
 
 ## 1.Supabase 란 ?
 
 >https://supabase.com/docs
 
-프로젝트를 빠르게 구축하기 위한 백앤드 서비스들 모음집 + 클라우드   
+Supabase : 프로젝트를 빠르게 구축하기 위한 백앤드 서비스들 모음집 + 클라우드 서비스 이다.  
+- firebase의 NoSQL버전이라고 봐도 좋다.!  
+
+### 6대 핵심 기능 
 
 데이터베이스:
 - Supabase는 각 프로젝트에 대해 전체적인 Postgres 데이터베이스를 제공하며 실시간 기능, 데이터베이스 백업, 확장 기능 등을 제공합니다.
@@ -50,6 +51,7 @@ AI 및 벡터:
 
 ```Supabase vs Firebase 비교 ```  
 ![alt](./figure02.excalidraw.png)
+
 
 DB : 
 - PostgreSQL 데이터베이스 : PostgreSQL은 대규모 엔터프라이즈 애플리케이션에서 수년 동안 사용되어 왔으며 많은 개발자의 신뢰를 받고 있습니다.  
@@ -130,7 +132,6 @@ where auth.uid() = todos.user_id; -- Policy is implicitly added.
 
 ### RLS 로 해결하는 API 취약점  
 
-
 BOLA - Broken Object Level Authorization. 
 - 접근 권한이 없는 데이터에 접근을 하는 경우이다.  
 - 예를 들어, A 사용자는 자신의 정보만 볼 수 있어야 하는 데, 같은 권한 수준을 가진 B 사용자의 정보까지 볼 수 있는 경우를 말한다.  
@@ -141,22 +142,63 @@ BFLA - Broken Function Level Authorization
 
 * postgreSQL의 RLS 기능을 이용해서 BOLA, BFLA 예방할 수 있다.  
 
+### 📌 면접연습 - 알고있는 API 취약점에 대해서 설명하고, 이를 해결하는 방법을 말해주세요.  
 
 ref : [11개 API 취약점](https://jusths.tistory.com/330)
 
-
 ## 6.Supabase 시작하기 (조직 만들기, 프로젝트 만들기)  
+
+- Supabase는 조직단위로 사람들을 초대할 수 있어요.  
+- 그 사람들과 함께 여러 프로젝트를 진행할 수 있죠.  
 
 ## 7.Todolist (with no RLS) 테이블 만들기  
 
-![Alt text](image-1.png)
+![Alt text](image-1.png)  
+
+Table Editor로 투두 리스트롤 만들어 보세요.  
+- 각 필드에 대한 목적도 숙지가 되었나요?
 
 ## 8.Supbase TableEditor 사용해보기 with suapAI 
 
-![Alt text](image.png)
+![Alt text](image.png)  
+
+Todo 테이블에 대해서 CRUD 작업을 해보세요.!  
+- SQL구문 없이 supabase 툴을 이용해서요. 
+
 
 ## 9.Supbase SQL Editor 사용해보기 
 
+### 📌 면접연습 - CRUD 란 무엇이며, 기본적인 SQL 구문을 작성 해주세요.  
+
+CRUD는 데이터베이스에서 자주 사용되는 네 가지 기본적인 작업을 나타냅니다: Create(생성), Read(읽기), Update(갱신), Delete(삭제). 각각의 작업은 데이터의 관리를 위해 사용됩니다.
+
+1. **Create (생성)**:
+   - `INSERT INTO` 문을 사용하여 데이터베이스 테이블에 새로운 레코드를 추가합니다.
+   - 예를 들어, 새로운 사용자를 추가하려면 다음과 같이 SQL 문을 작성할 수 있습니다:
+     ```sql
+     INSERT INTO users (username, email) VALUES ('newuser', 'newuser@example.com');
+     ```
+
+2. **Read (읽기)**:
+   - `SELECT` 문을 사용하여 데이터베이스에서 데이터를 조회합니다.
+   - 예를 들어, 사용자의 정보를 조회하려면 다음과 같이 SQL 문을 작성할 수 있습니다:
+     ```sql
+     SELECT * FROM users WHERE username = 'newuser';
+     ```
+
+3. **Update (갱신)**:
+   - `UPDATE` 문을 사용하여 데이터베이스의 기존 레코드를 수정합니다.
+   - 예를 들어, 사용자의 이메일 주소를 업데이트하려면 다음과 같이 SQL 문을 작성할 수 있습니다:
+     ```sql
+     UPDATE users SET email = 'updated@example.com' WHERE username = 'newuser';
+     ```
+
+4. **Delete (삭제)**:
+   - `DELETE` 문을 사용하여 데이터베이스에서 레코드를 삭제합니다.
+   - 예를 들어, 사용자를 삭제하려면 다음과 같이 SQL 문을 작성할 수 있습니다:
+     ```sql
+     DELETE FROM users WHERE username = 'newuser';
+     ```
 
 ```sql
 -- R
@@ -175,3 +217,6 @@ delete from todos_no_rls where  id = 2;
 ```
 
 ## 10.DBeaver로 supabase connection 해보기
+
+Supabase를 꼭 웹에서 관리하지 않아도 좋습니다.  
+- 필요하다면 DB를 직접 connection해서 접속 할 수 있죠.   

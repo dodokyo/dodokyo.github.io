@@ -10,9 +10,9 @@ sidebar_position: 2
 
 ### IDE + Node.js 설치하기
 
-- VSCode 설치 > https://code.visualstudio.com/.  
-- node.js 설치 > https://nodejs.org/en.  
-- yarn 설치 ``` npm install yarn -g ```.  
+- VSCode 설치 > https://code.visualstudio.com/
+- node.js 설치 > https://nodejs.org/en  
+- yarn 설치 ``` npm install yarn -g ``` 
 
 ### vscode extension 설치 목록  
 
@@ -86,9 +86,8 @@ yarn add cookies-next@^4.1.1
 - mac : https://data-jj.tistory.com/78#google_vignette
 
 
-## 4.(보충) github SSH키 등록법
+## 4.(보충) VSCode Typescript 애러 해결
 
-## 5.(보충) VSCode Typescript 애러 해결
 
 ### 애러) TS버전 선택 이슈  
 
@@ -106,10 +105,8 @@ yarn add cookies-next@^4.1.1
 2) tsconfig 파일에 공백을 하나 추가하고 다시 저장해주시면 포멧팅이 되며 해결 됩니다.   
 *혹은 경로를 재설정 해주세요.  
 
----
 
-## 6.라이브러리, 툴 소개
-
+## 5.라이브러리 소개
 
 1. **Next.js 14:**
    - Next.js는 React 기반의 웹 프레임워크로, SSR(Server-Side Rendering) 및 정적 사이트 생성을 지원
@@ -147,3 +144,8 @@ yarn add cookies-next@^4.1.1
 - 좀 더 쉽게 쿠키 다루기   
 
 ```
+
+## 6.(보충) SSH 키 등록방법
+
+(Mac) https://ej-developer.tistory.com/13
+(Window) https://codechacha.com/ko/ssh-keygen-github/  
