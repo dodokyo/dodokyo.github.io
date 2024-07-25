@@ -116,3 +116,18 @@ React는 기본적으로 MVC(Model-View-Controller) 패턴을 따르지 않습�
 
 ## 14 TodoList UI 만들기 - event
 
+
+### 📌 질문 : apis/todos-no-rls.ts 파일의 1번 라인에 "use client" 혹시 오타인지 잘 모르겠어서 말씀드립니다. 위 구절 지우고 실행해보니 정상적으로 됐습니다. todos-no-rls.ts파일은 클라이언트에서 실행되는 파일은 아니지 않나요??  
+
+
+답변
+
+1.todos-no-rls.ts 파일은 createSupabaseBrowserClient 을 사용하고 있으며 클라이언트에서 가져와서 실행되는 함수가 담긴 모듈(파일) 입니다. 서버 액션이 아닙니다. 그냥 함수라고 보면 됩니다. 서버액션도 비스무리 하게 정의되어 있어서 많이 헷갈리는 부분입니다.  
+
+2.사실 "use client" 가 없어도 잘 작동합니다. 왜냐하면 todos-no-rls.ts 파일을 다른 리액트 컴포넌트에서 사용할거에요.근데 그 리액트 컴포넌트 파일에 "use client" 가 붙어있다면, todos-no-rls.ts 파일도 "use client" 가 붙어 있는 효과를 받습니다.  
+
+3."use client"가 붙어 있는 효과라는것은 서버에서만 동작하는 함수/파일이 아닌브라우저에서도 동작 가능하도록, "서버에서 제공" 됩니다. ( 한마디로 모든 PC 크롬까지 파일을 전달함)   
+
+4.이러한 동작원리를 "클라이언트 경계"라고 합니다.  ( 좀 어려운 내용이긴 해요.)참고 : https://react.dev/reference/rsc/use-client#use-client  
+
+5.todos-no-rls.ts 에 "use client" 붙인 이유는 다른 협업할 프로그래머를 위해서,클라이언트에서 동작함을 명시적으로 보여주기 위함입니다.!  
