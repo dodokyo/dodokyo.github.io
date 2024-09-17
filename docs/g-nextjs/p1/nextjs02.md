@@ -83,7 +83,8 @@ yarn add zustand@^4.5.0
 - 설치법 : https://ui.shadcn.com/docs/installation/next
 - https://ui.shadcn.com/docs/components/carousel 등 사용 가능 
 
-npx shadcn-ui@latest init
+npx shadcn@latest init
+(참고, 강의에는 npx shadcn-ui@latest init 으로 진행하지만 최신버전(latest) 명령어는 변경되었습니다.! )
 ✔ Which style would you like to use? › Default
 ✔ Which color would you like to use as base color? › Slate
 ✔ Would you like to use CSS variables for colors? … no / yes
