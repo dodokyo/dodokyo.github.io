@@ -2,17 +2,17 @@
 sidebar_position: 1
 ---
 
-# 4. ChatGPT with Cursor (원데이 클래스)    
+# 4. ChatGPT with Cursor (원데이 클래스) - 구현하기 
 
-- [4. ChatGPT with Cursor (원데이 클래스)](#4-chatgpt-with-cursor-원데이-클래스)
+- [4. ChatGPT with Cursor (원데이 클래스) - 구현하기](#4-chatgpt-with-cursor-원데이-클래스---구현하기)
   - [4.구현하기](#4구현하기)
     - [4.1 README 요구사항 작성](#41-readme-요구사항-작성)
-    - [1단계: 기본 설정 및 설치](#1단계-기본-설정-및-설치)
-    - [2단계: API 라우트 핸들러 구현](#2단계-api-라우트-핸들러-구현)
-    - [3단계: 프론트엔드와 API 연동](#3단계-프론트엔드와-api-연동)
-    - [4단계: 채팅 UI 구현](#4단계-채팅-ui-구현)
-    - [5단계: Vercel 배포하기](#5단계-vercel-배포하기)
-  - [5.마무리](#5마무리)
+    - [4.2 Cursor Settings 알아보기](#42-cursor-settings-알아보기)
+    - [4.3 1단계: 기본 설정 및 설치](#43-1단계-기본-설정-및-설치)
+    - [4.4 2단계: API 라우트 핸들러 구현](#44-2단계-api-라우트-핸들러-구현)
+    - [4.5 3단계: 프론트엔드와 API 연동](#45-3단계-프론트엔드와-api-연동)
+    - [4.6 4단계: 채팅 UI 구현](#46-4단계-채팅-ui-구현)
+    - [4.7 5단계: Vercel 배포하기](#47-5단계-vercel-배포하기)
 
 ## 4.구현하기
 
@@ -45,7 +45,10 @@ sidebar_position: 1
 - 에러 처리
 ```
 
-### 1단계: 기본 설정 및 설치  
+
+### 4.2 Cursor Settings 알아보기  
+
+### 4.3 1단계: 기본 설정 및 설치  
 
 ```bash
 # Next.js 프로젝트 생성
@@ -87,7 +90,8 @@ module.exports = {
 }
 ```
 
-### 2단계: API 라우트 핸들러 구현  
+
+### 4.4 2단계: API 라우트 핸들러 구현  
 
 `app/api/chat/route.ts` 파일 생성:
 
@@ -123,7 +127,7 @@ export async function POST(req: Request) {
 }
 ```
 
-### 3단계: 프론트엔드와 API 연동  
+### 4.5 3단계: 프론트엔드와 API 연동  
 
 `app/hooks/useChat.ts` 훅 생성:
 
@@ -184,7 +188,7 @@ export function useChat() {
 }
 ```
 
-### 4단계: 채팅 UI 구현  
+### 4.6 4단계: 채팅 UI 구현  
 
 `app/components/ChatUI.tsx` 생성:
 
@@ -280,7 +284,7 @@ export default function Home() {
 }
 ```
 
-### 5단계: Vercel 배포하기    
+### 4.7 5단계: Vercel 배포하기    
 
 1. GitHub에 프로젝트 푸시하기:
 ```bash

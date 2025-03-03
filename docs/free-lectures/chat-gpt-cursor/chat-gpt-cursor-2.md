@@ -2,11 +2,12 @@
 sidebar_position: 1
 ---
 
-# 2. ChatGPT with Cursor (원데이 클래스)    
+# 2. ChatGPT with Cursor (원데이 클래스) - 구현방법론
 
-- [2. ChatGPT with Cursor (원데이 클래스)](#2-chatgpt-with-cursor-원데이-클래스)
+- [2. ChatGPT with Cursor (원데이 클래스) - 구현방법론](#2-chatgpt-with-cursor-원데이-클래스---구현방법론)
   - [2.구현 전략](#2구현-전략)
     - [1.Cursor IDE 소개](#1cursor-ide-소개)
+      - [Cursor IDE의 가격 정책](#cursor-ide의-가격-정책)
       - [코드 자동 완성 (Tab)](#코드-자동-완성-tab)
       - [AI 채팅 (Chat)](#ai-채팅-chat)
       - [에이전트 (Agent)](#에이전트-agent)
@@ -16,6 +17,7 @@ sidebar_position: 1
       - [Claude 3.7 Sonnet](#claude-37-sonnet)
       - [Claude 3.7-thinking](#claude-37-thinking)
     - [3.AI Agent 소개](#3ai-agent-소개)
+    - [4.구현 계획 (with Cursor IDE)](#4구현-계획-with-cursor-ide)
 
 
 ## 2.구현 전략    
@@ -24,6 +26,11 @@ sidebar_position: 1
 >https://www.cursor.com/features  
 
 ![Alt text](image-1.png)   
+
+
+#### Cursor IDE의 가격 정책
+무료 요금제: 기본 IDE 기능, 제한된 AI 기능, 커뮤니티 지원, 개인 사용을 제공합니다.  ￼  
+프로 요금제: 모든 IDE 기능, 고급 AI 기능, 우선 지원, 전문가용 기능을 제공합니다.   
 
 
 ( 🤖 Ask : 아래 사이트 요약 ( Claude-3.7-sonnet-thinking) )   
@@ -59,6 +66,9 @@ Cursor는 AI 기반 기능을 통해 개발자의 코딩 속도와 효율성을 
 
 ### 2.Claude 3.5, 3.7, 3.7-thinking 차이점 분석
 
+![Alt text](image-3.png)  
+https://www.anthropic.com/claude/sonnet  
+
 ( 🤖 Ask : Claude 3.5, 3.7, 3.7-thinking 차이점 분석 ( Claude-3.7-sonnet-thinking) )  
 
 #### Claude 3.5 Sonnet
@@ -91,4 +101,20 @@ Cursor IDE 사용자 경험
 - 3.내 개발환경에 맞는 추천을 잘 해주는가?  
 - 4.Agent가 내 의도대로 잘 행동하는가?  
 
+### 4.구현 계획 (with Cursor IDE)  
 
+1.README에 요구사항을 정립    
+- 구현할 프로젝트 목표, 기술스택, 구현 Step  
+  - 예) 설치 > 서버 코드 > UI 로직 코드 > 마크업 코드 .. 
+  - 하나의 기능을 모두 구현하지 않고 단계별로 작성한다.   
+
+2.AI 담당할 부분을 정하기  
+- 사람이 하는게 낫다.   
+- 모든것을 맡기면 수정 및 사후 검증에 시간이 많이 걸림.   
+- eg) AI가 모르는 내용, 간단한 설치 등 
+
+3.순차적으로 구현 및 검증하기  
+- 단계별 구현 시작.  
+
+4.Vercel 배포   
+- 배포 단계.  

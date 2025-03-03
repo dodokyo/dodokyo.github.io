@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# 3. ChatGPT with Cursor (원데이 클래스)    
+# 3. ChatGPT with Cursor (원데이 클래스) - 개발환경  
 
-- [3. ChatGPT with Cursor (원데이 클래스)](#3-chatgpt-with-cursor-원데이-클래스)
+- [3. ChatGPT with Cursor (원데이 클래스) - 개발환경](#3-chatgpt-with-cursor-원데이-클래스---개발환경)
   - [3.개발환경 셋팅](#3개발환경-셋팅)
     - [1.Node.js 설치](#1nodejs-설치)
       - [설치 확인](#설치-확인)

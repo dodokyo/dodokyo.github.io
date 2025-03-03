@@ -2,17 +2,17 @@
 sidebar_position: 1
 ---
 
-# 4. ChatGPT with Cursor (원데이 클래스)    
+# 4. ChatGPT with Cursor (원데이 클래스) - AI Agent 활용  
 
-- [4. ChatGPT with Cursor (원데이 클래스)](#4-chatgpt-with-cursor-원데이-클래스)
+- [4. ChatGPT with Cursor (원데이 클래스) - AI Agent 활용](#4-chatgpt-with-cursor-원데이-클래스---ai-agent-활용)
   - [5.마무리](#5마무리)
-    - [AI Agent : 테스트 코드](#ai-agent--테스트-코드)
     - [AI Agent : 코드 리뷰](#ai-agent--코드-리뷰)
+    - [AI Agent : 테스트 코드](#ai-agent--테스트-코드)
+    - [요약](#요약)
     - [AI 시대 전략](#ai-시대-전략)
 
 ## 5.마무리    
 
-### AI Agent : 테스트 코드  
 
 ### AI Agent : 코드 리뷰  
 
@@ -76,6 +76,18 @@ sidebar_position: 1
 [코드 블록 또는 파일]
 ```
 
+
+
+### AI Agent : 테스트 코드  
+>직접해보기.!  
+
+### 요약  
+
+Cursor IDE  
+- AI Agnet : Cursor 주요 Settings 
+- AI Agnet : 최신 공식문서로 BFF, UI 로직 구현하기  
+- AI Agnet : 이미지 래퍼런스로 UI 구현하기  
+- AI Agnet : 코드 리뷰 시키기
 
 ### AI 시대 전략  
 

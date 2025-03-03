@@ -2,11 +2,15 @@
 sidebar_position: 1
 ---
 
-# 1. ChatGPT with Cursor (원데이 클래스)    
+# 1. ChatGPT with Cursor (원데이 클래스) - 소개
 
-- [1. ChatGPT with Cursor (원데이 클래스)](#1-chatgpt-with-cursor-원데이-클래스)
+- [1. ChatGPT with Cursor (원데이 클래스) - 소개](#1-chatgpt-with-cursor-원데이-클래스---소개)
   - [1.강의 소개](#1강의-소개)
-  - [결과](#결과)
+      - [목적](#목적)
+      - [결과 미리 보기!](#결과-미리-보기)
+    - [Live Demo : https://clone-chat-gpt-cursor.vercel.app/](#live-demo--httpsclone-chat-gpt-cursorvercelapp)
+    - [강의 수업 자료 : https://dodokyo.github.io/docs/free-lectures/chat-gpt-cursor/chat-gpt-cursor-1](#강의-수업-자료--httpsdodokyogithubiodocsfree-lectureschat-gpt-cursorchat-gpt-cursor-1)
+      - [사용하는 기술 스택, 선행지식](#사용하는-기술-스택-선행지식)
       - [Next.js AppRouter](#nextjs-approuter)
       - [TailwindCSS](#tailwindcss)
       - [Shadcn](#shadcn)
@@ -14,14 +18,21 @@ sidebar_position: 1
 
 ## 1.강의 소개   
 
-목적  
-- Cursor IDE를 활용해서 빠르게 Web Application을 만들어본다.
-  - *AI Agent 기능을 이용한 빠른 프로토타이핑* with cursor IDE  
+#### 목적  
+- Cursor IDE를 활용해서 빠르게 Web Application을 만들어본다. (1시간만에 1프로젝트)  
+  - *AI Agent 기능을 이용한 빠른 프로토타이핑* with cursor IDE    
 
-결과 
-- 
+#### 결과 미리 보기!  
 
-사용하는 기술 스택
+| Home | Chat |
+|--------|--------|
+| ![Alt text](image-5.png) | ![Alt text](image-4.png)   |
+
+### Live Demo : https://clone-chat-gpt-cursor.vercel.app/
+### 강의 수업 자료 : https://dodokyo.github.io/docs/free-lectures/chat-gpt-cursor/chat-gpt-cursor-1  
+
+#### 사용하는 기술 스택, 선행지식  
+- React, Typescript  
 - Next.js AppRouter
 - TailwindCss
 - RadixUI
