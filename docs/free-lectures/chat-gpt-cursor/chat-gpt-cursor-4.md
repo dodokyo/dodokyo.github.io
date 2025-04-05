@@ -7,6 +7,7 @@ sidebar_position: 1
 - [4. ChatGPT with Cursor (원데이 클래스) - 구현하기](#4-chatgpt-with-cursor-원데이-클래스---구현하기)
   - [4.구현하기](#4구현하기)
     - [4.1 README 요구사항 작성](#41-readme-요구사항-작성)
+    - [📌 Shadcn --force 이슈](#-shadcn---force-이슈)
     - [4.2 Cursor Settings 알아보기](#42-cursor-settings-알아보기)
     - [4.3 1단계: 기본 설정 및 설치](#43-1단계-기본-설정-및-설치)
     - [4.4 2단계: API 라우트 핸들러 구현](#44-2단계-api-라우트-핸들러-구현)
@@ -44,6 +45,11 @@ sidebar_position: 1
 - 채팅 이력 유지
 - 에러 처리
 ```
+
+### 📌 Shadcn --force 이슈   
+>https://ui.shadcn.com/docs/react-19  
+- To support React 19, package maintainers will need to test and update their packages to include React 19 as a peer dependency. This is already in progress.
+- 패키지 유지보수자들이 React 19를 peer dependency로 추가하는 작업 진행 중.  
 
 
 ### 4.2 Cursor Settings 알아보기  
